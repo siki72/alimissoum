@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "roboto";
+  src: url(/fonts/Roboto-Regular.ttf);
+}
+.container {
+  display: flex;
+  align-items: center;
+  height: 7rem;
+  justify-content: space-between;
+  min-width: 80%;
+  max-width: 95%;
+  margin: 0 auto;
+}
+.container.active {
+  display: flex;
+  align-items: center;
+  height: 7rem;
+  justify-content: space-between;
+  min-width: 80%;
+  max-width: 95%;
+  margin: 0 auto;
+  background-color: black;
+}
+
+.logo {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.img {
+  background-color: #7352ba;
+  border-radius: 50%;
+  transform: rotate(17deg);
+  border: 3px solid rgb(19, 25, 45);
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: 15%;
+  object-position: 15%;
+}
+.name{
+  font-weight:bold;
+  font-size: 1.3rem;
+  font-family: 'Roboto', sans-serif;
+}
+.ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  
+  font-size: 1.1rem;
+}
+.li{
+  font-family: "Roboto";
+  color: rgb(0, 0, 0);
+  transition: 0.5s;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(to right, rgb(100, 200, 200), rgb(100, 200, 200)), linear-gradient(to right, #7352ba, rgb(255, 0, 180), #7352ba);
+  background-size: 0% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+.li:hover{
+  background-size: 0 3px, 100% 3px;
+}
+.logout {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  background-color: #53c28b;
+  color: rgb(0, 0, 0);
+}
