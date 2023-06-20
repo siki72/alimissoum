@@ -47,14 +47,13 @@
   align-items: center;
   gap: 2rem;
   list-style: none;
-  
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 .li{
   font-family: "Roboto";
   color: rgb(0, 0, 0);
   transition: 0.5s;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
   background: linear-gradient(to right, rgb(100, 200, 200), rgb(100, 200, 200)), linear-gradient(to right, #7352ba, rgb(255, 0, 180), #7352ba);
   background-size: 0% 3px, 0 3px;
@@ -72,4 +71,31 @@
   cursor: pointer;
   background-color: #53c28b;
   color: rgb(0, 0, 0);
+}
+.btn {
+  background: transparent;
+  border-radius: 0.3rem;
+  border: 2px solid;
+  cursor: pointer;
+}
+.line {
+  transition:
+  y 300ms ease-in,
+  rotate 300ms ease-in 300ms,
+  opacity 0ms 300ms
+  ;
+  transform-origin: center;
+}
+
+.btn :is(.top, .bottom) {
+  y:45
+}
+.btn .top {
+  rotate:45deg
+}
+.btn .middle {
+  opacity: 0;
+}
+.btn .bottom {
+  rotate:-45deg
 }

@@ -1,10 +1,11 @@
 "use client"
 import Link from 'next/link.js';
-import React from 'react';
+import React, { useState } from 'react';
 import styles from "./navbar.module.css"
 import Image from 'next/image.js';
 
 const NavBar = () => {
+    const [isOpen, setIsOpen] = useState(false)
     const links = [
         {
             id: 1,
@@ -40,6 +41,35 @@ const NavBar = () => {
     ]
     return (
         <nav className={styles.container}>
+            <div className={styles.btnContainer}>
+                <button className={`${styles.btn} ${styles.btnone}`}
+                    onClick={()=> setIsOpen(!isOpen)}
+                >
+                    <svg className={styles.hamburger} viewBox='0 0 100 100' width={30}>
+                        <rect className={isOpen ?  `${styles.line} ${styles.top}`:`${styles.line}` }
+                         width={80}
+                         height={10}
+                         x={10}
+                         y={25}
+                         rx={5}
+                         ></rect> 
+                         <rect className={isOpen ?  `${styles.line} ${styles.middle}`:`${styles.line}` }
+                         width={80}
+                         height={10}
+                         x={10}
+                         y={45}
+                         rx={5}
+                         ></rect>
+                         <rect className={isOpen ?  `${styles.line} ${styles.bottom}`:`${styles.line}` }
+                         width={80}
+                         height={10}
+                         x={10}
+                         y={65}
+                         rx={5}
+                         ></rect>
+                    </svg>
+                </button>
+            </div>
             <Link  href="/" className={styles.logo}>
                 <Image className={styles.img} src="/img/profile.png" width={80}height={80} alt='profile image' /><span className={styles.name}>Ali Missoum</span>
             </Link>

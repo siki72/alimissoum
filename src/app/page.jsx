@@ -5,7 +5,7 @@ const page = () => {
     <div className={styles.container}>
       <section className={styles.hero}>
         <div className={styles.welcom}>
-          <p>Bienvenue Dans Mon Portfolio</p>
+          <p>Bienvenue dans mon portfolio</p>
         </div>
         <div className={styles.title}>
           <h1>Hello, je m&apos;appelle Ali</h1>
