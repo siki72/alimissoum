@@ -22,3 +22,10 @@ a {
   justify-content: space-between;
   flex-direction: column;
 }
+.swiper-pagination-bullet{
+  opacity: 1 !important;
+}
+.swiper-pagination-bullet-active{
+  background-color: rgb(192, 165, 255) !important;
+
+}
