@@ -76,9 +76,9 @@ const NavBar = () => {
             <Link  href="/" className={styles.logo}>
                 <Image className={styles.img} src="/img/profile.png" width={80}height={80} alt='profile image' /><span className={styles.name}>Ali Missoum</span>
             </Link>
-            <ul className={styles.ul}>
+            <ul className={isOpen ? `${styles.active}`: `${styles.ul}`}>
                 {links.map(link => (
-                    <li key={link.id} className={styles.li}>
+                    <li key={link.id} className={styles.li} onClick={()=> setIsOpen(false)}>
                         <Link href={link.url}>{link.title}</Link>
                     </li>
                 ))}

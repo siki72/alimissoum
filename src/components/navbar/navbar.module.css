@@ -12,7 +12,7 @@
   align-items: center;
   height: 7rem;
   justify-content: space-between;
-  position: relative;
+  position: relative; 
 
 }
 .signature{
@@ -56,19 +56,44 @@
   font-family: 'roboto', sans-serif;
 }
 .ul {
-  display: none;
-/*   display: flex;
+  position: fixed;
+  top: 15%;
+  min-width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+  display: flex;
   align-items: center;
+  flex-direction: column;
+  left: -400px;
   gap: 2rem;
   list-style: none;
-  font-size: 1rem; */
+  font-size: 1rem; 
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+.active {
+  left: 0;
+  position: fixed;
+  top: 0%;
+  min-width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+  font-size: 1rem; 
+  backdrop-filter: blur(10px);
+  transition: 0.4s;
 }
 .li{
   font-family: "Roboto";
-  color: rgb(0, 0, 0);
+  color: rgb(156, 61, 220);
   transition: 0.5s;
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1.3rem;
+  font-weight: 700;
   background: linear-gradient(to right, rgb(100, 200, 200), rgb(100, 200, 200)), linear-gradient(to right, #7352ba, rgb(255, 0, 180), #7352ba);
   background-size: 0% 3px, 0 3px;
   background-position: 100% 100%, 0 100%;
@@ -85,6 +110,9 @@
   cursor: pointer;
   background-color: #53c28b;
   color: rgb(0, 0, 0);
+}
+.btnContainer{
+  z-index: 3;
 }
 .btn {
   background: transparent;
