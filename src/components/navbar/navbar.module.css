@@ -2,14 +2,26 @@
   font-family: "roboto";
   src: url(/fonts/Roboto-Regular.ttf);
 }
+@font-face {
+  font-family: "caveat";
+  src: url(/fonts/Caveat-Regular.ttf);
+}
 .container {
+  padding: 1rem;
   display: flex;
   align-items: center;
   height: 7rem;
   justify-content: space-between;
-  min-width: 80%;
-  max-width: 95%;
-  margin: 0 auto;
+  position: relative;
+
+}
+.signature{
+  position: absolute;
+  right: 1.5rem;
+}
+.signtext{
+  font-family: "caveat";
+  font-size: 2rem;
 }
 .container.active {
   display: flex;
@@ -23,9 +35,10 @@
 }
 
 .logo {
-    display: flex;
+  display: none;
+    /* display: flex;
     gap: 1rem;
-    align-items: center;
+    align-items: center; */
 }
 .img {
   background-color: #7352ba;
@@ -40,14 +53,15 @@
 .name{
   font-weight:bold;
   font-size: 1.3rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'roboto', sans-serif;
 }
 .ul {
-  display: flex;
+  display: none;
+/*   display: flex;
   align-items: center;
   gap: 2rem;
   list-style: none;
-  font-size: 1rem;
+  font-size: 1rem; */
 }
 .li{
   font-family: "Roboto";

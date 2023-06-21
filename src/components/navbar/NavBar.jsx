@@ -41,6 +41,9 @@ const NavBar = () => {
     ]
     return (
         <nav className={styles.container}>
+            <div className={styles.signature}>
+                <p className={styles.signtext}> Ali Missoum</p>
+            </div>
             <div className={styles.btnContainer}>
                 <button className={`${styles.btn} ${styles.btnone}`}
                     onClick={()=> setIsOpen(!isOpen)}

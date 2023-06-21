@@ -1,20 +1,140 @@
+@font-face {
+  font-family: "open";
+  src: url(/fonts/OpenSans.ttf);
+}
+@font-face {
+  font-family: "kalam";
+  src: url(/fonts/Kalam-Regular.ttf);
+}
+@font-face {
+  font-family: "abel";
+  src: url(/fonts/Abel-Regular.ttf);
+}
 .container {
+  position: relative;
+}
+
+.imgbg{
+   filter: hue-rotate(691deg);
 }
 .hero {
-  min-height: 100svh;
+  margin-top: 5rem;
   display: flex;
+  align-items: center;
   flex-direction: column;
-  justify-content: center;
-  align-items: left;
-
 }
 .welcom {
-  width: max-content;
+  display: none;
+/*   width: max-content;
   padding: 1rem;
   border-radius: 1rem;
-  background-color: black;
+  background-color: black; */
 }
 .welcom p{
   font-size: 1.5rem;
   color: white;
+}
+
+.textContainer {
+  padding-top: 4rem;
+  font-size: 1.5rem;
+  font-family: "kalam";
+  letter-spacing: 1px;
+}
+.imgcontainer {
+  overflow: hidden;
+  min-width: 100%;
+  min-height: 13rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  
+}
+
+.imgcontainer::before{
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(33, 30, 30);
+  z-index: 1;
+}
+
+.imgcontainer h1 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: white;
+  font-size: 1.7rem;
+  font-family: "open";
+}
+.imgrounder{
+  border-radius: 50%;
+  background-color: rgb(33, 30, 30);
+  z-index: 0;
+  z-index: 1;
+}
+.img {
+  height: auto;
+  transform: rotate(15deg);
+  border-radius: 50%;
+}
+.title {
+  padding: 2rem;
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+.stylediv{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: -1;
+}
+.title h2{
+  font-family: "open";
+  font-size: clamp(3rem, 6vw, 6rem);
+  color: rgb(255, 255, 255);
+}
+
+.presentation{
+  color: white;
+  z-index: 1;
+  text-align: center;
+  font-family: "abel";
+  font-size: 1.1rem;
+  max-width: 80%;
+  letter-spacing: 1px;
+  padding: 1rem 0;
+}
+.bubble {
+  text-align: center;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 9rem;
+  height: 3rem;
+  left: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-10rem);
+  transition: 0.3s;
+  animation: showPic 1s ease-in forwards;
+  top: 3rem; border-radius: 10px 10px 0 10px; /* Arrondi en haut à gauche, en haut à droite, en bas à gauche et en bas à droite respectivement */
+  
+
+}
+
+.bubble p {
+  margin: 0;
+  color: rgb(137, 88, 252);
 }
