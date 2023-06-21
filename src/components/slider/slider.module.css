@@ -3,12 +3,8 @@
  
 }
 .img {
-    
+    position: relative;
 }
-.swiper-pagination-bullet-active{
-    background-color: red !important;
-    color: red;
-  }
 .textContainer{
     text-align: left;
     max-width: 90%;

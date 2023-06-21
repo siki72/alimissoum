@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 import Image from "next/image.js";
 import Skils from "@/components/skils/Skils.jsx";
 import Projects from "@/components/projects/Projects.jsx";
-import Slider from "@/components/slider/Slider.jsx";
+import Touch from "@/components/touch/Touch.jsx";
 const page = () => {
   return (
     <div className={styles.container}>
@@ -36,7 +36,7 @@ const page = () => {
         <Projects />
       </section>
       <section>
-        {/* <Slider /> */}
+        <Touch />
       </section>
     </div>
   );
