@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./page.module.css";
 import Image from "next/image.js";
 import Skils from "@/components/skils/Skils.jsx";
+import Projects from "@/components/projects/Projects.jsx";
 const page = () => {
   return (
     <div className={styles.container}>
@@ -17,7 +18,7 @@ const page = () => {
           <h2> <span>Imaginer,</span> <span>Coder,</span> <span>créer</span></h2>
         </div>
         <div className={styles.textContainer}>
-          <p>bienvenue sur mon portfolio</p>
+          <p></p>
         </div>
         <div className={styles.imgcontainer}>
           <div className={styles.imgrounder}>
@@ -28,6 +29,9 @@ const page = () => {
       </section>
       <section className={styles.skils}>
         <Skils />
+      </section>
+      <section className={styles.projects}>
+        <Projects />
       </section>
     </div>
   );

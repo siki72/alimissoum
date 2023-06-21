@@ -61,8 +61,10 @@
   top: 20%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgb(33, 30, 30);
+  background-color: rgb(255, 255, 255);
   z-index: 1;
+  box-shadow: 1px 4px 6px 3px rgba(0, 0, 0, 0.1);
+  padding-bottom: 1rem;
 }
 
 .imgcontainer h1 {
@@ -75,8 +77,7 @@
 }
 .imgrounder{
   border-radius: 50%;
-  background-color: rgb(33, 30, 30);
-  z-index: 0;
+  background-color: rgb(255, 255, 255);
   z-index: 1;
 }
 .img {
@@ -104,7 +105,7 @@
 }
 
 .presentation{
-  color: white;
+  color: rgb(0, 0, 0);
   z-index: 1;
   text-align: center;
   font-family: "abel";

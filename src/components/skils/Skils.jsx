@@ -127,7 +127,7 @@ const Skils = () => {
             </div>
             
         </div>
-        <div className={styles.card}>
+        <div className={`${styles.card} ${styles.others}`}>
              <h3>Autres</h3>
              <div className={styles.logoContainer}>
               {others.map(techno =>(
