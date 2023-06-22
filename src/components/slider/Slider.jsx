@@ -41,7 +41,6 @@ const Slider = () => {
     className={styles.swiper}
         spaceBetween={50}
         slidesPerView={1}
-        mousewheel={true}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,

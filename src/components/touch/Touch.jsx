@@ -5,15 +5,15 @@ import Image from 'next/image.js';
 const Touch = () => {
     return (
         <div className={styles.container}>
-            <Image className={styles.img} src="/" width={20} height={20} alt=''/>
-            <form action="" method="post">
+            <h4 className={styles.title}>Contact</h4>
+            <form action="" method="post" className={styles.form}>
                 <div className={`${styles.inputContainer} ${styles.ic1}`}>
                     <input type="text" id={styles.firstName}
                      className={styles.input}
                      placeholder=''
                      />
                      <div className={styles.cut}></div>
-                     <label htmlFor="firstName" className={styles.placeHolder}>Nom</label>
+                     <label htmlFor="firstName" className={styles.label}>Nom</label>
                 </div>
                 <div className={`${styles.inputContainer} ${styles.ic2}`}>
                     <input type="text" id={styles.lastName}
@@ -21,15 +21,15 @@ const Touch = () => {
                      placeholder=''
                      />
                      <div className={styles.cut}></div>
-                     <label htmlFor="lastName" className={styles.placeHolder}>Prénom</label>
+                     <label htmlFor="lastName" className={styles.label}>Prénom</label>
                 </div>
                 <div className={`${styles.inputContainer} ${styles.ic3}`}>
                     <input type="email" id={styles.email}
                      className={styles.input}
                      placeholder=''
                      />
-                     <div className={styles.cut}></div>
-                     <label htmlFor="email" className={styles.placeHolder}>Email</label>
+                     <div className={`${styles.cut} ${styles.short}`}></div>
+                     <label htmlFor="email" className={styles.label}>Email</label>
                 </div>
                 <div className={`${styles.inputContainer} ${styles.ic4}`}>
                     <input type="phone" id={styles.phone}
@@ -37,17 +37,17 @@ const Touch = () => {
                      placeholder=''
                      />
                      <div className={styles.cut}></div>
-                     <label htmlFor="phone" className={styles.placeHolder}>Téléphone</label>
+                     <label htmlFor="phone" className={styles.label}>Téléphone</label>
                 </div>
-                <div className={`${styles.inputContainer} ${styles.ic4}`}>
-                    <textarea type="text" id={styles.message}
+                <div className={`${styles.inputContainer} ${styles.ic5}`}>
+                    <textarea rows={8} type="text" id={styles.message}
                      className={styles.input}
                      placeholder=''
                      />
                      <div className={styles.cut}></div>
-                     <label htmlFor="message" className={styles.placeHolder}>Message</label>
+                     <label htmlFor="message" className={styles.label}>Message</label>
                 </div>
-                <button type="submit">envoyer</button>
+                <button className={styles.btn} type="submit">envoyer</button>
             </form>
         </div>
     );

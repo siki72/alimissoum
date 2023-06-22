@@ -1,7 +1,74 @@
+@font-face {
+    font-family: "open";
+    src: url(/fonts/OpenSans.ttf);
+  }
 .container {
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.img {
-    display: none;
+  .form {
+    border-radius: 20px;
+    height: 500px;
+    padding: 20px;
+    width: 320px;
+  }
+  
+  .title {
+    font-family: 'open', sans-serif,;
+    font-weight: 600;
+    font-size: clamp(2rem, 6vw, 6rem);
+    color: rgb(219, 219, 219);
+    text-align: center;
+  }
+  .inputContainer{
+    position: relative;
+  }
+  .label{
+    font-family: "open";
+    position: absolute;
+    top: 2rem;
+    left: 20px;
+    color: rgb(169, 161, 161);
+    left: 1rem;
+    transition: 0.3s;
+    font-size: 1rem;
+  }
+ 
+.input {
+    resize: none;
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 1rem 1rem;
+    border: 1px solid rgb(169, 161, 161);
+    width: 100%;
+    border-radius: 4px;
+    outline: 0;
 }
+.input:focus-within{
+    border-color: rgb(135, 85, 210);
+}
+ .input:focus ~ .label {
+  transform: translateX(-13px) translateY(-35px);
+  font-size: 0.9rem;
+  color: rgb(137, 88, 252);
+}
+
+.btn {
+    padding: 0.5rem 2rem;
+    border: none;
+    background-color: rgb(137, 88, 252);
+    color: white;
+    font-family: "open";
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.btn:hover{
+  transform: scale(1.1);
+  background-color: rgb(111, 55, 244);
+}
+
