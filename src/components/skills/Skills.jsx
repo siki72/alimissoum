@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./skils.module.css";
+import styles from "./skills.module.css";
 import Image from "next/image.js";
 const Skils = () => {
   const back = [

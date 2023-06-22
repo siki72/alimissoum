@@ -20,7 +20,7 @@ const Touch = () => {
                      className={styles.input}
                      placeholder=''
                      />
-                     <div className={styles.cut}></div>
+                     <div className={`${styles.cut} ${styles.cutpre}`}></div>
                      <label htmlFor="lastName" className={styles.label}>Prénom</label>
                 </div>
                 <div className={`${styles.inputContainer} ${styles.ic3}`}>
@@ -36,7 +36,7 @@ const Touch = () => {
                      className={styles.input}
                      placeholder=''
                      />
-                     <div className={styles.cut}></div>
+                     <div className={`${styles.cut} ${styles.cuttel}`}></div>
                      <label htmlFor="phone" className={styles.label}>Téléphone</label>
                 </div>
                 <div className={`${styles.inputContainer} ${styles.ic5}`}>
@@ -44,7 +44,7 @@ const Touch = () => {
                      className={styles.input}
                      placeholder=''
                      />
-                     <div className={styles.cut}></div>
+                     <div className={`${styles.cut} ${styles.cutmes}`}></div>
                      <label htmlFor="message" className={styles.label}>Message</label>
                 </div>
                 <button className={styles.btn} type="submit">envoyer</button>

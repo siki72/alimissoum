@@ -47,13 +47,35 @@
     border-radius: 4px;
     outline: 0;
 }
+.cut {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  width: 3rem;
+  height: 0.5rem;
+  top: 0.8rem;
+  left: 0.6rem;
+  display: none;
+}
+.cuttel{
+  width: 5.2rem;
+}
+.cutpre{
+  width: 4.2rem;
+}
+.cutmes{
+  width: 4.4rem;
+}
 .input:focus-within{
     border-color: rgb(135, 85, 210);
 }
  .input:focus ~ .label {
-  transform: translateX(-13px) translateY(-35px);
+  transform: translateX(0rem
+  ) translateY(-1.6rem);
   font-size: 0.9rem;
   color: rgb(137, 88, 252);
+}
+ .input:focus ~ .cut {
+  display: block;
 }
 
 .btn {
