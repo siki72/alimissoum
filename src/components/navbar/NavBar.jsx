@@ -42,7 +42,7 @@ const NavBar = () => {
     return (
         <nav className={styles.container}>
             <div className={styles.signature}>
-                <p className={styles.signtext}> Ali Missoum</p>
+                <Image className={styles.logoImg} src="/img/logoali.png" width={100} height={80} alt='logo picture' />
             </div>
             <div className={styles.btnContainer}>
                 <button className={`${styles.btn} ${styles.btnone}`}

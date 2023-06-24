@@ -1,7 +1,4 @@
-@font-face {
-    font-family: "open";
-    src: url(/fonts/OpenSans.ttf);
-  }
+
 .container {
     display: flex;
     justify-content: center;
@@ -11,9 +8,8 @@
 .svg {
     position: absolute;
     left: 0;
-    top: -1rem;
+    top: 1rem;
     background-color: rgb(192, 165, 255);
-    z-index: 0;
 }
 
 .swiper{

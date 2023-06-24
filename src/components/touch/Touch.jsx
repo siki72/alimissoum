@@ -47,7 +47,10 @@ const Touch = () => {
                      <div className={`${styles.cut} ${styles.cutmes}`}></div>
                      <label htmlFor="message" className={styles.label}>Message</label>
                 </div>
+                <div className={`${styles.inputContainer} ${styles.ic5}`}>
                 <button className={styles.btn} type="submit">envoyer</button>
+                </div>
+                
             </form>
         </div>
     );

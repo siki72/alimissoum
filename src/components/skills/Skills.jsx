@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./skills.module.css";
 import Image from "next/image.js";
+import Cards from "../cards/Cards.jsx";
 const Skils = () => {
   const back = [
     {
@@ -103,6 +104,7 @@ const Skils = () => {
     <div className={styles.container}>
       <h3 className={styles.title}>Skills & Expérience</h3>
       <p className={styles.desc}>HTML, CSS, JS.., voici une liste de technos entre <em>back-end</em> et <em>Front-end</em> que j&apos;ai pu mettre en pratique mes compétences en réalisant divers projets concrets.</p>
+      <Cards />
       <div className={styles.cardsContainer}>
         <div className={styles.card}>
              <h3>Back-end</h3>

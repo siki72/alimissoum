@@ -6,6 +6,7 @@ import Skills from "@/components/skills/Skills.jsx";
 import Projects from "@/components/projects/Projects.jsx";
 import Touch from "@/components/touch/Touch.jsx";
 import Parcour from "@/components/parcour/Parcour.jsx";
+import Cards from "@/components/cards/Cards.jsx";
 const page = () => {
   return (
     <div className={styles.container}>
@@ -26,12 +27,12 @@ const page = () => {
           <div className={styles.imgrounder}>
             <Image className={styles.img} src="/img/profile.png" width={80} height={80} alt="pic" />
           </div>
-            <p className={styles.presentation}>Hello, <br /> je m&apos;applle Ali, je suis un Développeur Web. Autodidacte au départ puis je me suis formée à la 3W Academy pendant 6 mois trés intenses, qui m&apos;ont permis de me construire des bases solides dans le dévloppement web. <br /></p>
+            <p className={styles.presentation}>Hello, <br /> je suis Ali Missoum, Développeur full-stack freelance Node / Express/ SQL / JavaScript / React / Nextjs. <br /></p>
         </div>
       </section>
-      <section className={styles.parcour}>
+ {/*      <section className={styles.parcour}>
         <Parcour />
-      </section>
+      </section> */}
       <section className={styles.skills}>
         <Skills />
       </section>
@@ -41,6 +42,7 @@ const page = () => {
       <section>
         <Touch />
       </section>
+      <Cards />
     </div>
   );
 };

@@ -17,18 +17,15 @@
 .textContainer h4{
     font-size: 0.7rem;
     text-transform: uppercase;
-    font-family: "open";
     color: rgba(46, 44, 44, 0.553);
 }
 .textContainer h3{
     font-size: 1.5rem;
     text-transform: uppercase;
-    font-family: "open";
 }
 .textContainer h5{
     font-size: 0.7rem;
     text-transform: uppercase;
-    font-family: "open";
 }
 
 .img {
