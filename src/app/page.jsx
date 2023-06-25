@@ -12,28 +12,25 @@ const page = () => {
     <div className={styles.container}>
       <section className={styles.hero}>
         <div className={styles.welcom}>
-          <p>Bienvenue dans mon portfolio</p>
-        </div>
-        <div className={styles.title}>
-        <div className={styles.stylediv}>
-        <Image  className={styles.imgbg} src="/img/colorimg.png" height={300} width={360} alt="art color" />
-      </div>
-          <h2> <span>Imaginer,</span> <span>Coder,</span> <span>créer</span></h2>
-        </div>
-        <div className={styles.textContainer}>
-          <p></p>
+          <h1>Bonjour,<br /> je suis ali missoum</h1>
+          <p className={styles}>Développeur full-stack freelance Node / Express / SQL / JavaScript / React / Nextjs. <br />
+            </p>
+            <button className={styles.btn}>mes projets</button>
         </div>
         <div className={styles.imgcontainer}>
           <div className={styles.imgrounder}>
             <Image className={styles.img} src="/img/profile.png" width={80} height={80} alt="pic" />
           </div>
-            <p className={styles.presentation}>Hello, <br /> je suis Ali Missoum, Développeur full-stack freelance Node / Express/ SQL / JavaScript / React / Nextjs. <br /></p>
+          <p>  
+              Je suis un développeur front-end freelance, basé sur Le Mans.
+              Vous trouverez ici plus d&apos;informations sur moi, ce que je fais, et mes compétences actuelles, principalement en termes de programmation et de technologie.
+              Je suis ouvert aux opportunités d&apos;emploi où je peux collaborer, apprendre et acroitrre mes compétances. Si vous avez un projets à réaliser, n&apos;hésitez pas à me contacter. </p> 
         </div>
       </section>
  {/*      <section className={styles.parcour}>
         <Parcour />
       </section> */}
-      <section className={styles.skills}>
+     <section className={styles.skills}>
         <Skills />
       </section>
       <section className={styles.projects}>

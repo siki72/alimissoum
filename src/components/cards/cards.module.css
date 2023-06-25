@@ -11,14 +11,16 @@
    
 }
 .card {
-  padding: 2rem;
+    
+    padding: 2rem;
     position: relative;
-    display: block;
-    height: 30rem;  
+    display: flex;
+    align-items: flex-start;
+    min-height: 32rem;  
     border-radius: calc(40 * 1px);
     overflow: hidden;
     text-decoration: none;
-    background-color: #ffffff;
+    background-color: rgb(243,243,242);
     box-shadow: 1px 4px 6px 3px rgba(0, 0, 0, 0.1);
   }
   .image {      
@@ -36,34 +38,63 @@
     transform: translateY(100%);
     transition: .2s ease-in-out;
   }
-
-  .card:hover .overlay {
-    transform: translateY(0);
-  }
   .header {
     position: relative;
     display: flex;
     align-items: center;
     gap: 2em;
-    padding: 2em;
+    padding:3rem 0;
     border-radius: calc(40 * 1px) 0 0 0;    
     background-color: rgb(147,198,241);
     transform: translateY(-100%);
-    transition: .2s ease-in-out;
+    transition: .3s ease-in-out;
   }
   .arc {
     width: 80px;
     height: 80px;
     position: absolute;
-    bottom: 100%;
+    bottom: 99%;
     right: 0;      
     z-index: 1;
   }
   .arc path {
     fill: rgb(147,198,241);
     d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
-  }   
-  .card:hover .header {
+  }
+  .arrow{
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.358);
+    animation: upDown 2s infinite ease-in-out;
+    margin: 0 auto;
+    transform: rotate(180deg);
+    cursor: pointer;
+  }
+  .icon {
+    font-size: 2rem;
+    color: white;
+    transition: .3s;
+  } 
+  .technosHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  .iconTechnos{
+    font-size: 6rem;
+  }
+  .rotate180{
+    transform: rotate(180deg);
+  }
+  .toTop{
     transform: translateY(0);
   }
   .thumb {
@@ -77,7 +108,41 @@
     margin: 0 0 .3em;
     color: #6A515E;
   }
-  .status {
-    font-size: .8em;
-    color: #D7BDCA;
+
+  .imgContainer{
+    height: 100%;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 1rem 0;
+  }
+  .pics{
+    flex-basis: 33%;
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    text-transform: uppercase;
+    justify-content: space-between;
+    font-weight: 700;
+    color: white;
+  }
+  .pic{
+    height: auto;
+  }
+
+  @keyframes  upDown{
+    0%, 100%{
+      transform: translateY(0);
+    }
+    50%{
+      transform: translateY(-1rem);
+    }
   }

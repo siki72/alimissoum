@@ -102,45 +102,7 @@ const Skils = () => {
   ]
   return (
     <div className={styles.container}>
-      <h3 className={styles.title}>Skills & Expérience</h3>
-      <p className={styles.desc}>HTML, CSS, JS.., voici une liste de technos entre <em>back-end</em> et <em>Front-end</em> que j&apos;ai pu mettre en pratique mes compétences en réalisant divers projets concrets.</p>
       <Cards />
-      <div className={styles.cardsContainer}>
-        <div className={styles.card}>
-             <h3>Back-end</h3>
-            <div className={styles.logoContainer}>
-              {back.map(techno =>(
-                <div key={techno.id} className={styles.wrapper}>
-                <Image className={styles.logo} width={80} height={80} src={techno.url} alt={techno.title} />
-                <p className={styles.techName}>{techno.title}</p>
-                </div>
-              ))}
-            </div>
-        </div>
-        <div className={styles.card}>
-             <h3>Front-end</h3>
-             <div className={styles.logoContainer}>
-              {front.map(techno =>(
-                <div key={techno.id} className={styles.wrapper}>
-                <Image className={styles.logo} width={80} height={80} src={techno.url} alt={techno.title} />
-                <p className={styles.techName}>{techno.title}</p>
-                </div>
-              ))}
-            </div>
-            
-        </div>
-        <div className={`${styles.card} ${styles.others}`}>
-             <h3>Autres</h3>
-             <div className={styles.logoContainer}>
-              {others.map(techno =>(
-                <div key={techno.id} className={styles.wrapper}>
-                <Image className={styles.logo} width={80} height={80} src={techno.url} alt={techno.title} />
-                <p className={styles.techName}>{techno.title}</p>
-                </div>
-              ))}
-            </div>
-        </div>
-      </div>
     </div>
   );
 };
