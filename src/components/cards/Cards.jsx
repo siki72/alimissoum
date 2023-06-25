@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import styles from "./cards.module.css"
 import Image from 'next/image.js';
 import { AiOutlineArrowUp } from "react-icons/ai";
-import { MdSettingsApplications } from "react-icons/md";
+import { MdOutlineLan, MdOutlineScreenshotMonitor, MdExtension } from "react-icons/md";
 const Cards = () => {
   const [backOpen, setBackOpen] = useState(null)
   const [frontOpen, setFrontOpen] = useState(null)
@@ -120,19 +120,16 @@ const Cards = () => {
               break;
           }
         }
-      
-      console.log("back", backOpen )
-      console.log("front", frontOpen )
-      console.log("other", othersOpen )
     return (
         <div className={styles.container}>
             <ul className={styles.cards}>
   <li>
     <div className={styles.card}>
       <div className={styles.technosHeader}>
-      <MdSettingsApplications className={styles.iconTechnos}/>
+      <MdOutlineLan className={styles.iconTechnos}/>
       <h3 className={styles.title}>Back-end</h3>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident quas, quis architecto ea voluptas temporibus.</p>
+      <p className={styles.desc}>Bien que je n&apos;ai pas fait du développement back-end ma spécialité, j&apos;éprouve toujours beaucoup de plaisir à créer des applications à partir de zéro en utilisant ces technologies.
+      </p>
       </div>
       <div className={!backOpen ? `${styles.overlay}` :`${styles.overlay} ${styles.toTop}` } >
         <div className={!backOpen ? `${styles.header}` :`${styles.header} ${styles.toTop}` }>
@@ -144,7 +141,7 @@ const Cards = () => {
         <div  className={styles.imgContainer}>
         {back.map(img =>(
           <div key={img.id} className={styles.pics}>
-            <Image   className={styles.pic} src={img.url} alt={img.title} width={80} height={80} />
+            <Image   className={styles.pic} src={img.url} alt={img.title} width={50} height={50} />
             <p className={styles.techName}>{img.title}</p>
           </div>
             ))}
@@ -153,23 +150,23 @@ const Cards = () => {
     </div>      
   </li>
   <li>
-  <div className={styles.card}>
+  <div className={`${styles.card} ${styles.frontCard}`}>
       <div className={styles.technosHeader}>
-      <MdSettingsApplications className={styles.iconTechnos}/>
-      <h3 className={styles.title}>Back-end</h3>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident quas, quis architecto ea voluptas temporibus.</p>
+      <MdOutlineScreenshotMonitor className={styles.iconTechnos}/>
+      <h3 className={styles.title}>Front-end</h3>
+      <p className={styles.desc}>Voici une liste de quelques langagues et de framwork coté front-end avec laquel je donne vie à des des interfaces utilisateur interactives et esthétiquement agréables et les voir prendre vie dans le navigateur. </p>
       </div>
-      <div className={frontOpen ? `${styles.overlay}` :`${styles.overlay} ${styles.toTop}` } >
-        <div className={frontOpen ? `${styles.header}` :`${styles.header} ${styles.toTop}` }>
+      <div className={!frontOpen ? `${styles.overlay}` :`${styles.overlay} ${styles.toTop}` } >
+        <div className={!frontOpen ? `${styles.header}` :`${styles.header} ${styles.toTop}` }>
           <svg className={styles.arc} xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
           <div className={styles.arrow} onClick={()=> hadnleOpen("front")}>
-            <AiOutlineArrowUp className={frontOpen ? `${styles.icon}` : `${styles.icon} ${styles.rotate180}`}/>
+            <AiOutlineArrowUp className={!frontOpen ? `${styles.icon}` : `${styles.icon} ${styles.rotate180}`}/>
           </div>
         </div>
         <div  className={styles.imgContainer}>
         {front.map(img =>(
-          <div key={img.id} className={styles.pics}>
-            <Image   className={styles.pic} src={img.url} alt={img.title} width={80} height={80} />
+          <div key={img.id} className={styles.picsFront}>
+            <Image   className={styles.pic} src={img.url} alt={img.title} width={50} height={50} />
             <p className={styles.techName}>{img.title}</p>
           </div>
             ))}
@@ -180,21 +177,21 @@ const Cards = () => {
   <li>
   <div className={styles.card}>
       <div className={styles.technosHeader}>
-      <MdSettingsApplications className={styles.iconTechnos}/>
-      <h3 className={styles.title}>Back-end</h3>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident quas, quis architecto ea voluptas temporibus.</p>
+      <MdExtension className={styles.iconTechnos}/>
+      <h3 className={styles.title}>Tools</h3>
+      <p className={styles.desc}>Les outils essentiels pour collaborer, organiser de manière méthodique et versionner son travail </p>
       </div>
-      <div className={othersOpen ? `${styles.overlay}` :`${styles.overlay} ${styles.toTop}` } >
-        <div className={othersOpen ? `${styles.header}` :`${styles.header} ${styles.toTop}` }>
+      <div className={!othersOpen ? `${styles.overlay}` :`${styles.overlay} ${styles.toTop}` } >
+        <div className={!othersOpen ? `${styles.header}` :`${styles.header} ${styles.toTop}` }>
           <svg className={styles.arc} xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
           <div className={styles.arrow} onClick={()=> hadnleOpen("others")}>
-            <AiOutlineArrowUp className={othersOpen ? `${styles.icon}` : `${styles.icon} ${styles.rotate180}`}/>
+            <AiOutlineArrowUp className={!othersOpen ? `${styles.icon}` : `${styles.icon} ${styles.rotate180}`}/>
           </div>
         </div>
         <div  className={styles.imgContainer}>
         {others.map(img =>(
           <div key={img.id} className={styles.pics}>
-            <Image   className={styles.pic} src={img.url} alt={img.title} width={80} height={80} />
+            <Image   className={styles.pic} src={img.url} alt={img.title} width={50} height={50} />
             <p className={styles.techName}>{img.title}</p>
           </div>
             ))}
