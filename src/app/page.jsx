@@ -40,7 +40,6 @@ const page = () => {
       <section>
         <Touch />
       </section>
-      <Cards />
     </div>
   );
 };

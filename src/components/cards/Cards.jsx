@@ -124,7 +124,7 @@ const Cards = () => {
         <div className={styles.container}>
             <ul className={styles.cards}>
   <li>
-    <div className={styles.card}>
+    <div className={`${styles.card} ${styles.cardBack}`}>
       <div className={styles.technosHeader}>
       <MdOutlineLan className={styles.iconTechnos}/>
       <h3 className={styles.title}>Back-end</h3>
@@ -150,7 +150,7 @@ const Cards = () => {
     </div>      
   </li>
   <li>
-  <div className={`${styles.card} ${styles.frontCard}`}>
+  <div className={`${styles.card} ${styles.cardFront}`}>
       <div className={styles.technosHeader}>
       <MdOutlineScreenshotMonitor className={styles.iconTechnos}/>
       <h3 className={styles.title}>Front-end</h3>
@@ -175,7 +175,7 @@ const Cards = () => {
     </div> 
   </li>
   <li>
-  <div className={styles.card}>
+  <div className={`${styles.card} ${styles.cardOthers}`}>
       <div className={styles.technosHeader}>
       <MdExtension className={styles.iconTechnos}/>
       <h3 className={styles.title}>Tools</h3>
