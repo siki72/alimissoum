@@ -109,8 +109,8 @@
   border-radius: 0.5rem;
   border: none;
   cursor: pointer;
-  background-color: #53c28b;
-  color: rgb(0, 0, 0);
+  background-color: #170dd3;
+  color: rgb(255, 255, 255);
 }
 .btnContainer{
   z-index: 3;

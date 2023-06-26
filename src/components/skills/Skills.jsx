@@ -102,7 +102,7 @@ const Skils = () => {
   ]
   return (
     <div className={styles.container}>
-      <h3 className={styles.title}>Compétences et expérience</h3>
+      <h3 className={styles.title}>Compétences & expérience.</h3>
       <Cards />
     </div>
   );

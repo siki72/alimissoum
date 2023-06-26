@@ -12,10 +12,10 @@ const page = () => {
     <div className={styles.container}>
       <section className={styles.hero}>
         <div className={styles.welcom}>
-          <h2>Bonjour, je suis Ali Missoum</h2>
+          <h2>Bonjour, je suis Ali Missoum,</h2>
           <h1 className={styles}>Développeur full-stack freelance Node / Express / SQL / JavaScript / React / Nextjs. <br />
             </h1>
-            <p> <span className={styles.colorEffect}>Ensemble</span>, créons une interface web intelligente, offrant une expérience <span className={styles.colorEffect}>utilisateur</span> optimale</p>
+            <p> <span className={styles.colorEffect}>Ensemble</span>, créons une interface web moderne, offrant une expérience <span className={styles.colorEffect}>utilisateur</span> optimale</p>
             <button className={styles.btn}>mes projets</button>
         </div>
         <div className={styles.imgcontainer}>

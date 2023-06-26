@@ -12,9 +12,14 @@ const Projects = () => {
         <div >
           <svg className={styles.svg} viewBox="0 0 800 500">
 
-            <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#ffff"/>
+            <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" stroke="transparent" fill="#F3F3F2"/>
             <path className="card__line" d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" stroke="#0000" strokeWidth="3" fill="transparent"/>
           </svg>
+        </div>
+        <div className={styles.textBox}>
+
+        <h3 className={styles.title}>Projets. </h3>
+        <p>Vous trouverez ici de mes derniers projets et clients que j'ai créés, chaque projet contenant sa propre étude de cas.</p>
         </div>
         <Slider />
       {/* <Image

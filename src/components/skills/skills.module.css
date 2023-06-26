@@ -18,6 +18,19 @@
   font-size: clamp(1.3rem, 4vw, 4rem);
   letter-spacing: 1px;
   color: rgb(29, 28, 28);
+  position: relative;
+  
+}
+.title::before{
+  position: absolute;
+    content: "";
+    width: 4rem;;
+    height: 0.4rem;
+    bottom: -1rem;
+    border-radius: 0.3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #180DD3;
 }
 .desc {
   font-size: 1rem;

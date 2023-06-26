@@ -69,7 +69,6 @@
   justify-content: center;
   position: relative;
   z-index: 1;
-  
 }
 
 .imgcontainer::before{
@@ -100,6 +99,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgb(0, 0, 0);
 }
 .imgcontainer p{
   margin-top: 1rem;

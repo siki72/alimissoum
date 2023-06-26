@@ -4,19 +4,20 @@
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin: 4rem 5vw;
+    gap: 4rem;
+    margin: 4rem 5vw 0 5vw;
     padding: 0;
     list-style-type: none;
-   
+   padding-bottom: 2rem;
 }
 .card {
+  z-index: 1;
     padding: 2rem 0;
     position: relative;
     display: flex;
     align-items: flex-start;
     min-height: 29.5rem;  
-    border-radius: calc(40 * 1px);
+    border-radius: 1rem;
     overflow: hidden;
     text-decoration: none;
     background-color: rgb(243,243,242);
@@ -25,15 +26,15 @@
   .cardBack{
     background-color: white;
     border: 1px solid rgb(198, 191, 191);
-    min-height: 31rem;  
+    min-height: 38rem;  
   }
 .cardFront{
-    min-height: 37rem;
+    min-height: 46rem;
   }
   .cardOthers{
     background-color: white;
     border: 1px solid rgb(198, 191, 191);
-    min-height: 31rem;
+    min-height: 38rem;
   }
   .image {      
     width: 100%;
@@ -43,6 +44,7 @@
     font-size: clamp(1rem, 2vw, 1.3rem);
     line-height: 2rem;
     max-width: 90%;
+    padding-top: 3rem;
   }
 
   .overlay {
@@ -52,7 +54,7 @@
     right: 0;
     z-index: 1;      
     border-radius: calc(40 * 1px);    
-    background-color: rgb(147,198,241);      
+    background-color: #170dd3;      
     transform: translateY(100%);
     transition: .2s ease-in-out;
   }
@@ -63,7 +65,7 @@
     gap: 1em;
     padding:2rem 0;
     border-radius: calc(40 * 1px) 0 0 0;    
-    background-color: rgb(147,198,241);
+    background-color: #170dd3;
     transform: translateY(-100%);
     transition: .3s ease-in-out;
   }
@@ -76,7 +78,7 @@
     z-index: 1;
   }
   .arc path {
-    fill: rgb(147,198,241);
+    fill: #170dd3;
     d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
   }
   .arrow{
@@ -171,15 +173,16 @@
     justify-content: space-around;
   }
   .pic{
-    filter: opacity(0.5);
     transition: 0.3s;
+    font-size: 3rem;
+    color: rgb(236, 218, 218);
   }
   .pic:hover{
     opacity: 1;
   }
 
   .techName{
-    color: black;
+    color: rgb(246,246,246);
   }
 
   @keyframes  upDown{

@@ -4,81 +4,89 @@ import styles from "./cards.module.css"
 import Image from 'next/image.js';
 import { AiOutlineArrowUp } from "react-icons/ai";
 import { MdOutlineLan, MdOutlineScreenshotMonitor, MdExtension } from "react-icons/md";
+import { SiExpress,SiMongodb, SiNodedotjs, SiMysql,SiHtml5, SiCss3, SiSass,SiTailwindcss, SiBootstrap,SiJavascript, SiReact, SiRedux,
+  SiNextdotjs, SiVite, SiVisualstudio, SiJirasoftware, SiGit, SiGithub, SiDocker, SiSocketdotio
+ } from "react-icons/si";
 const Cards = () => {
   const [backOpen, setBackOpen] = useState(null)
   const [frontOpen, setFrontOpen] = useState(null)
   const [othersOpen, setOthersOpen] = useState(null)
     const back = [
+      {
+        id:0,
+        title: "Express",
+        icon: SiExpress
+      },
         {
           id:1,
           title: "mongodb",
-          url: "/img/back/mongodb.png"
+          icon: SiMongodb
         },
         {
           id:2,
           title: "node.js",
-          url: "/img/back/nod.png"
+          icon: SiNodedotjs
         },
         {
           id:3,
-          title: "python",
-          url: "/img/back/python.png"
+          title: "mysql",
+          icon: SiMysql
         },
         {
-          id:18,
-          title: "sql",
-          url: "/img/back/sql.png"
+          id:4,
+          title: "Socket.io",
+          icon: SiSocketdotio
         },
       ]
       const front =[
         {
-          id:4,
-          title: "html",
-          url: "/img/front/html.png"
-        },
-        {
           id:5,
-          title: "css",
-          url: "/img/front/css.png"
+          title: "html",
+          icon: SiHtml5
         },
         {
           id:6,
-          title: "sass",
-          url: "/img/front/sass.png"
+          title: "css",
+          icon: SiCss3
         },
         {
           id:7,
-          title: "bootstrap",
-          url: "/img/front/bootstrap.png"
+          title: "sass",
+          icon: SiSass
         },
         {
           id:8,
-          title: "javascript",
-          url: "/img/front/js.png"
+          title: "Tailwindcss",
+          icon: SiTailwindcss
         },
         {
           id:9,
-          title: "react",
-          url: "/img/front/react.png"
-        },{
-          id:10,
-          title: "redux",
-          url: "/img/front/redux.png"
+          title: "Bootstrap",
+          icon: SiBootstrap
         },
         {
+          id:10,
+          title: "Javascript",
+          icon: SiJavascript
+        },{
           id:11,
-          title: "next",
-          url: "/img/front/next.png"
+          title: "React",
+          icon: SiReact
         },
         {
           id:12,
-          title: "taildwind",
-          url: "/img/front/tailwind1.png"
+          title: "Redux",
+          icon: SiRedux
         },
         {
           id:13,
+          title: "Next.js",
+          icon: SiNextdotjs
+        },
+        {
+          id:14,
           title: "Vite",
-          url: "/img/front/Vite.png"
+          icon: SiVite
         },
         
       ]
@@ -86,23 +94,28 @@ const Cards = () => {
       const others = [
         {
           id:14,
-          title: "Jira",
-          url: "/img/others/jirasoft.png"
+          title: "Jirasoftware",
+          icon: SiJirasoftware
         },
         {
           id:15,
           title: "Git",
-          url: "/img/others/git.png"
+          icon: SiGit
         },
         {
           id:16,
           title: "Github",
-          url: "/img/others/github.png"
+          icon: SiGithub
         },
         {
           id:17,
           title: "Docker",
-          url: "/img/others/docker.png"
+          icon: SiDocker
+        },
+        {
+          id:18,
+          title: "VScode",
+          icon: SiVisualstudio
         },
       ]
     
@@ -141,7 +154,7 @@ const Cards = () => {
         <div  className={styles.imgContainer}>
         {back.map(img =>(
           <div key={img.id} className={styles.pics}>
-            <Image   className={styles.pic} src={img.url} alt={img.title} width={50} height={50} />
+            <img.icon  className={styles.pic}  />
             <p className={styles.techName}>{img.title}</p>
           </div>
             ))}
@@ -166,7 +179,7 @@ const Cards = () => {
         <div  className={styles.imgContainer}>
         {front.map(img =>(
           <div key={img.id} className={styles.picsFront}>
-            <Image   className={styles.pic} src={img.url} alt={img.title} width={50} height={50} />
+            <img.icon  className={styles.pic}  />
             <p className={styles.techName}>{img.title}</p>
           </div>
             ))}
@@ -191,7 +204,7 @@ const Cards = () => {
         <div  className={styles.imgContainer}>
         {others.map(img =>(
           <div key={img.id} className={styles.pics}>
-            <Image   className={styles.pic} src={img.url} alt={img.title} width={50} height={50} />
+            <img.icon  className={styles.pic}  />
             <p className={styles.techName}>{img.title}</p>
           </div>
             ))}
