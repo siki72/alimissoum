@@ -1,4 +1,11 @@
-
+@font-face {
+  font-family: "oswald";
+  src: url("/fonts/Oswald.ttf");
+}
+@font-face {
+  font-family: "lora";
+  src: url("/fonts/Lora.ttf");
+}
 .container {
   position: relative;
 }
@@ -25,6 +32,7 @@
   margin: 9rem auto 0 auto;
 }
 .welcom h1{
+  font-family: "lora";
   font-size:  clamp(1.1rem, 3vw, 1.5rem );
   /* font-size:  clamp(1.7rem, 5vw, 5rem ); */
   line-height: 2rem;
@@ -33,17 +41,21 @@
 }
 .welcom h2{
   font-size: clamp(1rem, 2vw, 1.5rem);
+  font-family: "lora";
   font-weight: 400;
   color: #0d080a;
 }
 .welcom p{
-  font-size:  clamp(1.3rem, 5.7vw, 5rem );
+  font-family: "oswald";
+  font-size:  clamp(1.9rem, 5vw, 5rem );
   line-height: 3rem;
   color: #0d080a;
   text-transform: uppercase;
-  font-weight: 700;
 }
 .btn {
+  font-family: "oswald";
+  letter-spacing: 3px;
+  font-size: clamp(1rem, 2vw, 2rem);
   margin-top: 2rem;
   padding: 1.3rem 3rem;
   border: none;
@@ -53,8 +65,11 @@
   color: white;
   cursor: pointer;
   background-color: #170dd3;
+  transition: all 0.3s ease-in-out;
 }
-
+.btn:hover{
+  transform: translateY(-0.5rem);
+}
 .textContainer {
   padding-top: 4rem;
   font-size: 1.5rem;
@@ -75,8 +90,8 @@
   content: "";
   position: absolute;
   width: 95%;
-  height: 21rem;
-  top: 20%;
+  height: 23rem;
+  top: 15%;
   left: 50%;
   transform: translateX(-50%);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.358);

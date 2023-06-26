@@ -6,11 +6,9 @@ const Touch = () => {
   return (
     <div className={styles.container}>
       <div className={styles.textBox}>
-
       <h4 className={styles.title}>Contact.</h4>
       <p>
-        Vous souhaitez collaborer avec moi ? Je suis toujours prête à discuter
-        d&apos;un travail de conception de produit ou d&apos;opportunités de partenariat.
+      Vous êtes intéressé par une collaboration avec moi ? Je suis ouvert à la discussion concernant la conception et le développement de votre application, ainsi que les opportunités de partenariat. N&apos;hésitez pas à me contacter afin d&apos;explorer ensemble les possibilités de travailler sur des projets passionnants.
       </p>
       </div>
       <form action="" method="post" className={styles.form}>

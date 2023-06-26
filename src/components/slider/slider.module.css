@@ -1,5 +1,13 @@
+@font-face {
+  font-family: "oswald";
+  src: url("/fonts/Oswald.ttf");
+}
+@font-face {
+  font-family: "lora";
+  src: url("/fonts/Lora.ttf");
+}
 .swiper {
-  margin-top: 9rem;
+  margin-top: 14rem;
   padding-left: 1rem;
   background-color: rgb(255, 255, 255);
   max-width: 90%;
@@ -23,7 +31,9 @@
   color: rgba(48, 45, 45, 0.795);
 }
 .textContainer h3 {
+  font-family: "oswald";
   font-size: 1.5rem;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: rgb(0, 0, 0);
 }
@@ -31,9 +41,11 @@
   font-size: 0.7rem;
   text-transform: uppercase;
   color: rgba(160, 158, 158, 0.795);
+  
 }
 .textContainer p {
   color: rgb(48, 47, 47);
+  font-family: "lora";
 }
 
 .img {

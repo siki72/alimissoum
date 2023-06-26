@@ -1,8 +1,15 @@
-
+@font-face {
+  font-family: "oswald";
+  src: url("/fonts/Oswald.ttf");
+}
+@font-face {
+  font-family: "lora";
+  src: url("/fonts/Lora.ttf");
+}
 .container {
   position: relative;
   background-color: rgb(255, 255, 255);
-  margin-top: 3rem;
+  margin-top: 6rem;
 }
 .container::before{
   position: absolute;
@@ -14,6 +21,8 @@
   z-index: 0;
 }
 .title {
+  font-family: "oswald";
+  letter-spacing: 2px;
   text-align: center;
   font-size: clamp(1.3rem, 4vw, 4rem);
   letter-spacing: 1px;

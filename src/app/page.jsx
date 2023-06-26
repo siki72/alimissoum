@@ -23,9 +23,7 @@ const page = () => {
             <Image className={styles.img} src="/img/profile.png" width={80} height={80} alt="pic" />
           </div>
           <p>  
-              Je suis un développeur full-stack freelance orienté front-end , basé sur Le Mans.
-              Vous trouverez ici plus d&apos;informations sur moi, ce que je fais, et mes compétences actuelles, principalement en termes de programmation et de technologie.
-              Je suis ouvert aux opportunités d&apos;emploi où je peux collaborer, apprendre et acroitrre mes compétances. Si vous avez un projets à réaliser, n&apos;hésitez pas à me contacter. </p> 
+          Je suis un développeur full-stack freelance orienté front-end , basé sur Le Mans. Vous trouverez ici plus d&apos;informations sur moi, ce que je fais, et mes compétences actuelles, principalement en termes de programmation et de technologie. Je suis ouvert aux opportunités d&apos;emploi où je peux collaborer, apprendre et accroître mes compétences. Si vous avez un projet à réaliser, n&apos;hésitez pas à me contacter. </p> 
         </div>
       </section>
  {/*      <section className={styles.parcour}>

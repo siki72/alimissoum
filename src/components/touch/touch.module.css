@@ -1,10 +1,17 @@
-
+@font-face {
+  font-family: "oswald";
+  src: url("/fonts/Oswald.ttf");
+}
+@font-face {
+  font-family: "lora";
+  src: url("/fonts/Lora.ttf");
+}
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 5rem 0 3rem 0;
+    margin: 2rem 0 3rem 0;
 }
 
   .form {
@@ -18,21 +25,22 @@
     text-align: center;
   }
   .title {
-    font-size: clamp(1.4rem, 4vw, 4rem);
+    font-size: clamp(2rem, 2vw, 2rem);;
     color: rgb(29, 28, 28);
     text-align: center;
     line-height: 1.9rem;
     letter-spacing: 1px;
     position: relative;
     margin-bottom: 3rem;
-    
+    font-family: "oswald";
+    letter-spacing: 2px;
   }
   .title::after{
     position: absolute;
     content: "";
     width: 4rem;
     height: 0.4rem;
-    bottom: -1rem;
+    bottom: -2rem;
     border-radius: 0.3rem;
     left: 50%;
     transform: translateX(-50%);
@@ -42,6 +50,13 @@
     position: relative;
     max-width: 70%;
     margin: 0 auto;
+  }
+  .textBox p {
+    font-family: "lora";
+    font-size: clamp(1.1rem, 2vw, 2rem);
+    max-width: 90%;
+    margin: 0 auto;
+    line-height: 1.7rem;
   }
   .label{
     position: absolute;
