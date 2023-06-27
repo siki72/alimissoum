@@ -167,7 +167,7 @@ const Cards = () => {
       <div className={styles.technosHeader}>
       <MdOutlineScreenshotMonitor className={styles.iconTechnos}/>
       <h3 className={styles.title}>Front-end</h3>
-      <p className={styles.desc}>Voici une liste de quelques langagues et de framwork coté front-end avec laquel je transforme des idées en applications web et interfaces utilisateur interactives et esthétiquement agréables et les voir prendre vie dans le navigateur. </p>
+      <p className={styles.desc}>Voici une liste de quelques langagues et de framwork coté front-end avec laquel je transforme des idées, en applications web et interfaces utilisateur interactives et esthétiquement agréables avec toujours le méme plaisir de les voir prendre vie dans le navigateur. </p>
       </div>
       <div className={!frontOpen ? `${styles.overlay}` :`${styles.overlay} ${styles.toTop}` } >
         <div className={!frontOpen ? `${styles.header}` :`${styles.header} ${styles.toTop}` }>
@@ -192,7 +192,7 @@ const Cards = () => {
       <div className={styles.technosHeader}>
       <MdExtension className={styles.iconTechnos}/>
       <h3 className={styles.title}>Tools</h3>
-      <p className={styles.desc}>Les outils essentiels pour collaborer, organiser de manière méthodique et versionner son travail. </p>
+      <p className={styles.desc}>Les outils essentiels qui me facile mes tàches dans le dévélopement et je m'en sert également pour collaborer, organiser de manière méthodique et versionner mon travail. </p>
       </div>
       <div className={!othersOpen ? `${styles.overlay}` :`${styles.overlay} ${styles.toTop}` } >
         <div className={!othersOpen ? `${styles.header}` :`${styles.header} ${styles.toTop}` }>
