@@ -73,9 +73,6 @@ const NavBar = () => {
                     </svg>
                 </button>
             </div>
-            <Link  href="/" className={styles.logo}>
-                <Image className={styles.img} src="/img/profile.png" width={80}height={80} alt='profile image' /><span className={styles.name}>Ali Missoum</span>
-            </Link>
             <ul className={isOpen ? `${styles.active}`: `${styles.ul}`}>
                 {links.map(link => (
                     <li key={link.id} className={styles.li} onClick={()=> setIsOpen(false)}>

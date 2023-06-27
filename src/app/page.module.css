@@ -6,6 +6,11 @@
   font-family: "lora";
   src: url("/fonts/Lora.ttf");
 }
+
+/* @media screen and (min-width: $breakPoint-Tablet) {
+  width: 90%;
+  margin-top: 2rem;
+} */
 .container {
   position: relative;
 }
@@ -35,7 +40,7 @@
   font-family: "lora";
   font-size:  clamp(1.1rem, 3vw, 1.5rem );
   /* font-size:  clamp(1.7rem, 5vw, 5rem ); */
-  line-height: 2rem;
+  line-height: clamp(2rem, 3vw, 2.5rem );
   font-weight: 400;
   color: #0d080a;
 }
@@ -47,8 +52,8 @@
 }
 .welcom p{
   font-family: "oswald";
-  font-size:  clamp(1.9rem, 5vw, 5rem );
-  line-height: 3rem;
+  font-size:  clamp(1.9rem, 5vw, 4rem );
+  line-height: clamp(3rem, 7vw, 7rem );
   color: #0d080a;
   text-transform: uppercase;
 }
