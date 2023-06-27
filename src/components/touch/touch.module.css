@@ -13,7 +13,11 @@
     flex-direction: column;
     margin: 5rem 0 3rem 0;
 }
-
+.colorEffect {
+  background: linear-gradient(120deg, #1d27b9, #439FEE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
   .form {
     margin-top: 5rem;
     padding: 2rem 0;

@@ -7,6 +7,7 @@ import { MdOutlineLan, MdOutlineScreenshotMonitor, MdExtension } from "react-ico
 import { SiExpress,SiMongodb, SiNodedotjs, SiMysql,SiHtml5, SiCss3, SiSass,SiTailwindcss, SiBootstrap,SiJavascript, SiReact, SiRedux,
   SiNextdotjs, SiVite, SiVisualstudio, SiJirasoftware, SiGit, SiGithub, SiDocker, SiSocketdotio
  } from "react-icons/si";
+ import {TbSeo} from "react-icons/tb"
 const Cards = () => {
   const [backOpen, setBackOpen] = useState(null)
   const [frontOpen, setFrontOpen] = useState(null)
@@ -117,6 +118,11 @@ const Cards = () => {
           title: "VScode",
           icon: SiVisualstudio
         },
+        {
+          id:1,
+          title: "SEO",
+          icon: TbSeo
+        },
       ]
     
         const hadnleOpen = (tab) =>{
@@ -192,7 +198,7 @@ const Cards = () => {
       <div className={styles.technosHeader}>
       <MdExtension className={styles.iconTechnos}/>
       <h3 className={styles.title}>Tools</h3>
-      <p className={styles.desc}>Les outils essentiels qui me facile mes tàches dans le dévélopement et je m'en sert également pour collaborer, organiser de manière méthodique et versionner mon travail. </p>
+      <p className={styles.desc}>Les outils indispensables qui facilitent mes tâches de développement, ainsi que ma collaboration, mon organisation méthodique et la gestion des versions de mon travail. </p>
       </div>
       <div className={!othersOpen ? `${styles.overlay}` :`${styles.overlay} ${styles.toTop}` } >
         <div className={!othersOpen ? `${styles.header}` :`${styles.header} ${styles.toTop}` }>

@@ -7,7 +7,7 @@
   src: url("/fonts/Lora.ttf");
 }
 .container {
-    margin-top: 8rem;
+    margin-top: 5rem;
 }
 .cards {
     display: grid;

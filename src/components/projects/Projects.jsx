@@ -19,7 +19,7 @@ const Projects = () => {
         <div className={styles.textBox}>
 
         <h3 className={styles.title}>Projets. </h3>
-        <p>Vous trouverez ici une sélection de projets variés, chaque réalisation offre un design élégant et des fonctionalité personnalisées, parcourez les différents slides pour explorer les détails et les captures d&apos;écran de chaque projet.</p>
+        <p>Vous trouverez ici une sélection de projets variés, chaque réalisation offre un design élégant et des fonctionalité <span className={styles.colorEffect}>personnalisées</span>, parcourez les différents slides pour explorer les détails et les captures d&apos;écran de chaque projet.</p>
         </div>
         <Slider />
       {/* <Image
