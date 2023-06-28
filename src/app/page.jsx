@@ -17,8 +17,8 @@ const page = () => {
             </h1>
             <p> <span className={styles.colorEffect}>Ensemble</span>, créons une interface web moderne, offrant une expérience <span className={styles.colorEffect}>utilisateur</span> optimale</p>
             <button className={styles.btn}>mes projets</button>
-            <div className={styles.laptopContainer}>
-            <Image className={styles.laptopFlot} src="/img/heroSvg.svg" width={300} height={300} alt="lapto picture" />
+            <div className={styles.svgContainer}>
+            <Image className={styles.laptopFlot} src="/img/heroSvg.svg" width={1000} height={1000} alt="lapto picture" />
             </div>
         </div>
         <div className={styles.imgcontainer}>
