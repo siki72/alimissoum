@@ -5,20 +5,18 @@ import Image from "next/image.js";
 import Skills from "@/components/skills/Skills.jsx";
 import Projects from "@/components/projects/Projects.jsx";
 import Touch from "@/components/touch/Touch.jsx";
-import Parcour from "@/components/parcour/Parcour.jsx";
-import Cards from "@/components/cards/Cards.jsx";
 const page = () => {
+
   return (
     <div className={styles.container}>
       <section className={styles.hero}>
         <div className={styles.welcom}>
-          <h2>Bonjour, je suis Ali Missoum,</h2>
-          <h1 className={styles}>Développeur full-stack freelance, <br />Node / Express / SQL / JavaScript / React / Nextjs. <br />
-            </h1>
+          <h2 className={styles.desc}>Bonjour, je suis Ali Missoum</h2>
+          <h1 className={styles.text}>Développeur full-stack freelance, Node / Express / SQL / JavaScript / React / Nextjs.</h1>
             <p> <span className={styles.colorEffect}>Ensemble</span>, créons une interface web moderne, offrant une expérience <span className={styles.colorEffect}>utilisateur</span> optimale</p>
             <button className={styles.btn}>mes projets</button>
             <div className={styles.svgContainer}>
-            <Image className={styles.laptopFlot} src="/img/heroSvg.svg" width={1000} height={1000} alt="lapto picture" />
+            <Image className={styles.svg} src="/img/svgHero.svg" width={250} height={250} alt="illustration picture" />
             </div>
         </div>
         <div className={styles.imgcontainer}>

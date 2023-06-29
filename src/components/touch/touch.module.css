@@ -23,13 +23,16 @@
     padding: 2rem 0;
     background-color: rgb(255, 255, 255);
     border-radius: 1rem;
-    min-width: 90%;
+    width: 90%;
+    @media screen and (min-width: 868px) {
+      width: 45rem;
+    }
   }
   .textBox{
     text-align: center;
   }
   .title {
-    font-size: clamp(2rem, 2vw, 2rem);;
+    font-size: clamp(2rem, 2vw, 3rem);
     color: rgb(29, 28, 28);
     text-align: center;
     line-height: 1.9rem;
@@ -57,7 +60,7 @@
   }
   .textBox p {
     font-family: "lora";
-    font-size: clamp(1.1rem, 2vw, 2rem);
+    font-size: clamp(1.1rem, 1.5vw, 1.2rem);;
     max-width: 90%;
     margin: 0 auto;
     line-height: 1.7rem;

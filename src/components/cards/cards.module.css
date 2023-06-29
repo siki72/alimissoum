@@ -16,10 +16,25 @@
     margin: 4rem 5vw 0 5vw;
     padding: 0;
     list-style-type: none;
-   padding-bottom: 2rem;
-}
+    padding-bottom: 2rem;
+    
+    
+}/* 
+@media screen and (min-width: 755px){
+  .cards {
+    display: flex;
+    flex-direction: column;
+  }
+}  */
+/* @media screen and (min-width: 860px){
+  .cards {
+    display: flex;
+    flex-direction: row;
+    background-color: #170dd3;
+  }
+} */
 .card {
-  z-index: 1;
+    z-index: 1;
     padding: 2rem 0;
     position: relative;
     display: flex;
@@ -30,6 +45,10 @@
     text-decoration: none;
     background-color: rgb(243,243,242);
     box-shadow: 1px 4px 6px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  .card:hover{
+    box-shadow: 1px 4px 6px 3px rgba(0, 0, 0, 0.53);
   }
   .cardBack{
     background-color: white;
@@ -37,7 +56,13 @@
     min-height: 38rem;  
   }
 .cardFront{
-    min-height: 42.5rem;
+    min-height: 44rem;
+    @media screen and (min-width: 755px){
+      margin-top: 15rem;
+    } 
+    @media screen and (min-width: 1160px){
+      margin-top: 0;
+    }
   }
   .cardOthers{
     background-color: white;
@@ -50,7 +75,7 @@
   }
   .desc{
     font-family: "lora";
-    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-size: clamp(1rem, 3vw, 1rem);
     line-height: 2rem;
     max-width: 90%;
     padding-top: 3rem;
@@ -104,6 +129,9 @@
     margin: 0 auto;
     transform: rotate(180deg);
     cursor: pointer;
+  }
+  .arrow:hover{
+    animation-play-state: paused;
   }
   .icon {
     font-size: 2rem;
