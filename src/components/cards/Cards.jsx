@@ -9,9 +9,9 @@ import { SiExpress,SiMongodb, SiNodedotjs, SiMysql,SiHtml5, SiCss3, SiSass,SiTai
  } from "react-icons/si";
  import {TbSeo} from "react-icons/tb"
 const Cards = () => {
-  const [backOpen, setBackOpen] = useState(false)
+ const [backOpen, setBackOpen] = useState(false)
   const [frontOpen, setFrontOpen] = useState(false)
-  const [othersOpen, setOthersOpen] = useState(false)
+  const [othersOpen, setOthersOpen] = useState(false) 
 
     const back = [
       {
@@ -126,7 +126,7 @@ const Cards = () => {
         },
       ]
     
-        const hadnleOpen = (tab) =>{
+        /* const hadnleOpen = (tab) =>{
           console.log("tab", tab)
           switch (tab){
             case "front": 
@@ -139,7 +139,7 @@ const Cards = () => {
               setOthersOpen(!othersOpen)
               break;
           }
-        }
+        } */
     return (
         <div className={styles.container}>
             <ul className={styles.cards}>
@@ -151,8 +151,8 @@ const Cards = () => {
       <p className={styles.desc}>Bien que je n&apos;ai pas fait du développement back-end ma spécialité, j&apos;éprouve toujours beaucoup de plaisir à créer des applications à partir de zéro en utilisant ces technologies.
       </p>
       </div>
-      <div className={backOpen ? `${styles.overlay} ${styles.toTop}` : `${styles.overlay}`} >
-        <div className={backOpen ? `${styles.header} ${styles.toTop}` : `${styles.header}`}>
+      <div className={styles.overlay} >
+        <div className={styles.header}>
           <svg className={styles.arc} xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
           <div className={styles.arrow} onClick={()=> hadnleOpen("back")}>
             <AiOutlineArrowUp className={!backOpen ? `${styles.icon}` : `${styles.icon} ${styles.rotate180}`}/>

@@ -9,6 +9,7 @@ const page = () => {
 
   return (
     <div className={styles.container}>
+      <div className={styles.gradient}></div>
       <section className={styles.hero}>
         <div className={styles.welcom}>
           <h2 className={styles.desc}>Bonjour, je suis Ali Missoum</h2>

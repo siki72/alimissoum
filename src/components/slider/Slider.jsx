@@ -55,7 +55,7 @@ const Slider = () => {
         {projects.map(projet =>(
           <SwiperSlide key={projet.id}>
             <div className={styles.imgContainer}>
-            <Image className={styles.img} src={projet.url} width={550} height={550} alt={projet.title} />
+            <Image className={styles.img} src={projet.url} width={400} height={400} alt={projet.title} />
             </div>
             <div className={styles.textContainer}>
               <h4>{projet.shortDesc}</h4>
