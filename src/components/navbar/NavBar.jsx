@@ -1,12 +1,14 @@
 "use client"
 import Link from 'next/link.js';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import styles from "./navbar.module.css"
 import Image from 'next/image.js';
 import DarkMode from '../darkMode/DarkMode.jsx';
+import { ThemeContext } from '@/context/themeContextToggle.js';
 
 const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false)
+    const {mode} = useContext(ThemeContext)
     const links = [
         {
             id: 1,
@@ -49,7 +51,7 @@ const NavBar = () => {
                 <button className={`${styles.btn} ${styles.btnone}`}
                     onClick={()=> setIsOpen(!isOpen)}
                 >
-                    <svg className={styles.hamburger} viewBox='0 0 100 100' width={30}>
+                    <svg className={mode ==="light" ? `${styles.hamburger}`: `${styles.hamburger} ${styles.dark}`} viewBox='0 0 100 100'  width={30}>
                         <rect className={isOpen ?  `${styles.line} ${styles.top}`:`${styles.line}` }
                          width={80}
                          height={10}

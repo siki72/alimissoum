@@ -17,7 +17,11 @@
   width: 100%;
   height: auto;
 }
-
+.dark {
+  fill: white;
+  border-color: white;
+  color: white;
+}
 .signtext{
   font-size: 2rem;
 }

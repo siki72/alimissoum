@@ -9,10 +9,12 @@
     width: 3.4rem;
     height: 1.7rem;
     border-radius: 1rem;
+    transition:  0.3s ease-in-out;
 }
 .icon{
     font-size: 0.9rem;
     padding: 0.2rem;
+    transition:  0.3s ease-in-out;
 }
 .ball {
     position: absolute;
@@ -21,4 +23,9 @@
     background-color: #429FEB;
     right: 0.1rem;
     border-radius: 50%;
+    transition:  0.3s ease-in-out;
+}
+.right{
+    transform: translateX(-125%);
+    transition: 0.3s ease-in-out;
 }
