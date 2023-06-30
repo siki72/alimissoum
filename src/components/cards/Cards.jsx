@@ -1,5 +1,5 @@
-"use client"
-import React, { useEffect, useState } from 'react';
+
+import React from 'react';
 import styles from "./cards.module.css"
 import Image from 'next/image.js';
 import { AiOutlineArrowUp } from "react-icons/ai";
@@ -9,9 +9,6 @@ import { SiExpress,SiMongodb, SiNodedotjs, SiMysql,SiHtml5, SiCss3, SiSass,SiTai
  } from "react-icons/si";
  import {TbSeo} from "react-icons/tb"
 const Cards = () => {
- const [backOpen, setBackOpen] = useState(false)
-  const [frontOpen, setFrontOpen] = useState(false)
-  const [othersOpen, setOthersOpen] = useState(false) 
 
     const back = [
       {
@@ -125,21 +122,6 @@ const Cards = () => {
           icon: TbSeo
         },
       ]
-    
-        /* const hadnleOpen = (tab) =>{
-          console.log("tab", tab)
-          switch (tab){
-            case "front": 
-              setFrontOpen(!frontOpen)
-              break;
-            case "back":
-              setBackOpen(!backOpen)
-              break;
-            case "others":
-              setOthersOpen(!othersOpen)
-              break;
-          }
-        } */
     return (
         <div className={styles.container}>
             <ul className={styles.cards}>
@@ -155,7 +137,7 @@ const Cards = () => {
         <div className={styles.header}>
           <svg className={styles.arc} xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
           <div className={styles.arrow} onClick={()=> hadnleOpen("back")}>
-            <AiOutlineArrowUp className={!backOpen ? `${styles.icon}` : `${styles.icon} ${styles.rotate180}`}/>
+            <AiOutlineArrowUp className={styles.icon}/>
           </div>
         </div>
         <div  className={styles.imgContainer}>
@@ -176,11 +158,11 @@ const Cards = () => {
       <h3 className={styles.title}>Front-end</h3>
       <p className={styles.desc}>Voici une liste de quelques langagues et de framwork coté front-end avec laquel je transforme des idées, en applications web et interfaces utilisateur interactives et esthétiquement agréables avec toujours le méme plaisir de les voir prendre vie dans le navigateur. </p>
       </div>
-      <div className={frontOpen ? `${styles.overlay} ${styles.toTop}` :`${styles.overlay}` } >
-        <div className={frontOpen ? `${styles.header} ${styles.toTop}` :`${styles.header}`}>
+      <div className={styles.overlay} >
+        <div className={styles.header}>
           <svg className={styles.arc} xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
           <div className={styles.arrow} onClick={()=> hadnleOpen("front")}>
-            <AiOutlineArrowUp className={!frontOpen ? `${styles.icon}` : `${styles.icon} ${styles.rotate180}`}/>
+            <AiOutlineArrowUp className={styles.icon}/>
           </div>
         </div>
         <div  className={styles.imgContainer}>
@@ -201,11 +183,11 @@ const Cards = () => {
       <h3 className={styles.title}>Tools</h3>
       <p className={styles.desc}>Les outils indispensables qui facilitent mes tâches de développement, ainsi que ma collaboration, mon organisation méthodique et la gestion des versions de mon travail. </p>
       </div>
-      <div className={othersOpen ? `${styles.overlay} ${styles.toTop}` :`${styles.overlay}` } >
-        <div className={othersOpen ? `${styles.header} ${styles.toTop}` :`${styles.header}` }>
+      <div className={styles.overlay} >
+        <div className={styles.header}>
           <svg className={styles.arc} xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
           <div className={styles.arrow} onClick={()=> hadnleOpen("others")}>
-            <AiOutlineArrowUp className={!othersOpen ? `${styles.icon}` : `${styles.icon} ${styles.rotate180}`}/>
+            <AiOutlineArrowUp className={styles.icon}/>
           </div>
         </div>
         <div  className={styles.imgContainer}>

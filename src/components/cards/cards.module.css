@@ -158,21 +158,6 @@
     text-align: center;
     gap: 1rem;
   }
-  .iconTechnos{
-    font-size: 6rem;
-  }
-  .rotate180{
-    transform: rotate(180deg);
-  }
-  .toTop{
-    transform: translateY(0);
-  }
-  .thumb {
-    flex-shrink: 0;
-    width: 50px;
-    height: 50px;      
-    border-radius: 50%;      
-  }
   .title {
     font-family: "oswald";
     letter-spacing: 1px;
@@ -202,6 +187,9 @@
     margin: -1.5rem auto;
     padding: 1rem 0 2.5rem 0;
   }
+  .iconTechnos{
+    font-size: 4rem;
+  }
   .pics{
     flex-basis: 40%;
     position: relative;
@@ -214,19 +202,20 @@
     justify-content: space-between;
   }
   .picsFront{
+    flex-basis: 20%;
     position: relative;
     display: flex;
-    margin: 0.5rem 1rem;
+    gap:1em;
     flex-direction: column;
     text-align: center;
     align-items: center;
     text-transform: uppercase;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   .pic{
     transition: 0.3s;
     font-size: 3rem;
-    color: #479FED;
+    color: #afa2ff;
   }
   .pic:hover{
     opacity: 1;

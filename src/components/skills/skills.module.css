@@ -8,19 +8,26 @@
 }
 .container {
   position: relative;
-  background-color: rgb(255, 255, 255);
+  background-color: #EFEFEF;
   margin-top: 6rem;
+  @media screen and (min-width: 1240px) {
+    margin: 0;
+    padding-bottom: 3rem;
+  }
 }
 
 .textBox{
   max-width: 90%;
   margin: 0 auto;
+  @media screen and (min-width: 1152px) {
+    max-width: 50%;
+  }
 }
 .container::before{
   position: absolute;
   content: "";
   width: 100%;
-  background-color: rgb(255, 255, 255);
+  background-color: #EFEFEF;
   height: 12rem;
   top: -12rem;
   z-index: 0;

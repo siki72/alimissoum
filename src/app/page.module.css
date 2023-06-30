@@ -15,7 +15,7 @@
     display: block;
   width: 100%;
   height: 80rem;
-  background-image: radial-gradient(circle at 142% 70%, #6E07F3 50%, #e3e1df00 50%);
+  background-image: radial-gradient(circle at 142% 70%, #6E07F3 50%, #ffffff 50%);
   border-radius: 1px;
   position: absolute;
   background-size:100%;
@@ -29,7 +29,6 @@
   flex-direction: column;
   gap: 2rem;
   position: relative;
-  min-height: 100svh
 }
 .welcom {
   text-align: center;
@@ -40,6 +39,7 @@
   gap: 1rem;
   max-width: 90%;
   margin: 9rem auto 0 auto;
+  position: relative;
   @media screen and (min-width: 768px) {
     min-height: 25rem;
     justify-content: center;
@@ -49,7 +49,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    min-height: 49rem;
+    min-height: 100svh;
     max-width: 90%;
     margin: 0;
     padding-top: 5rem;
@@ -57,18 +57,18 @@
 }
 .text{
   font-family: "lora";
-  font-size:  clamp(1.1rem, 3vw, 1.5rem );
+  font-size:  clamp(1.1rem, 3vw, 1.2rem );
   line-height: clamp(2rem, 3vw, 2.5rem );
   font-weight: 600;
-  color: #0d080a;
+  color: #5b5b5b;
   position: relative;
   max-width: 42rem;
 }
 .desc{
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
   font-family: "lora";
   font-weight: 600;
-  color: #0d080a;
+  color: #5b5b5b;
   position: relative;
 }
 .desc::after{
@@ -76,7 +76,7 @@
   position: absolute;
   right: 0;
   width: 100%;
-  color: #000000;
+  color: #5b5b5b;
   background-color: #F3F3F2;
   animation: typing 3s steps(27) forwards, caret 1s infinite ;
 }
@@ -88,7 +88,7 @@
 }
 .welcom p{
   font-family: "oswald";
-  font-size:  clamp(1.9rem, 3vw, 2.5rem );
+  font-size:  clamp(1.9rem, 3vw, 2rem );
   line-height: clamp(3rem, 4vw, 4rem );
   color: #0d080a;
   text-transform: uppercase;
@@ -103,7 +103,7 @@
     position: absolute;
     right: 2.5rem;
     max-width: 22rem;
-    bottom: 9.5rem;
+    bottom: 0rem;
     transform: translateX(200%);
     transition: all 0.5s ease-in-out;
     animation: showSvg 1s forwards;
@@ -150,35 +150,21 @@
 }
 .imgcontainer {
   margin-top: 3rem;
-  min-width: 100%;
+  padding: 2rem;
+  max-width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   position: relative;
   z-index: 1;
-  @media screen and (min-width: 1240px) {
-    margin-top: -7rem;
-  }
-}
-
-.imgcontainer::before{
-  content: "";
-  position: absolute;
-  width: 95%;
-  height: 18rem;
-  top: 15%;
-  left: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.358);
-  padding-bottom: 1rem;
+  background-color: #0d080a;
   border-radius: 1rem;
-  background-color: #ffffff;
-  
-}
-@media screen and (min-width: 768px) {
-  .imgcontainer::before{
-    max-height: 13rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.358);
+  @media screen and (min-width: 1240px) {
+    margin-top: -3rem;
+    width: 70%;
+    padding-bottom: 3rem;
   }
 }
 .imgcontainer h1 {
@@ -191,11 +177,11 @@
 .imgrounder{
   border-radius: 50%;
   z-index: 1;
-  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.358); */
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.358);
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: transparent;
+  background-color: black;
 }
 .imgcontainer p{
   margin-top: 1rem;
@@ -204,8 +190,11 @@
   text-align: center;
   line-height: 2rem;
   z-index: 1;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-family: "lora";
+  @media screen and (min-width: 1240px) {
+    max-width: 70%;
+  }
 }
 .img {
   height: auto;

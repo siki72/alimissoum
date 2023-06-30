@@ -11,7 +11,20 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 5rem 0 3rem 0;
+    position: relative;
+    padding-bottom: 3rem;
+}
+
+.container::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    background-color: #EFEFEF;
+    top: -15rem;
+    height: 15rem;
+    left: -1;
+
+
 }
 .colorEffect {
   background: linear-gradient(120deg, #1d27b9, #439FEE);
@@ -19,17 +32,21 @@
   -webkit-text-fill-color: transparent;
 }
   .form {
-    margin-top: 5rem;
-    padding: 2rem 0;
+    margin-top: 2rem;
     background-color: rgb(255, 255, 255);
     border-radius: 1rem;
     width: 90%;
+    padding: 3rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.358);
     @media screen and (min-width: 868px) {
-      width: 45rem;
+      width: 40rem;
     }
   }
   .textBox{
     text-align: center;
+    @media screen and (min-width: 1152px) {
+      max-width: 50%;
+    }
   }
   .title {
     font-size: clamp(2rem, 2vw, 3rem);
@@ -55,7 +72,7 @@
 }
   .inputContainer{
     position: relative;
-    max-width: 70%;
+    max-width: 24rem;
     margin: 0 auto;
   }
   .textBox p {
