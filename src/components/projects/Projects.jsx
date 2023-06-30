@@ -8,7 +8,7 @@ import Slider from "../slider/Slider.jsx";
 
 const Projects = () => {
   return (
-    <div className={styles.container}>
+    <div id="projetcs" className={styles.container}>
         <div >
         </div>
         <div className={styles.textBox}>

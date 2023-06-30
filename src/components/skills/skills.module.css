@@ -54,11 +54,11 @@
     background-color: #6E07F3;
 }
 .text{
-  text-align: center;
   margin-top: 2rem;
   font-family: "lora";
   font-size: clamp(1.1rem, 1.5vw, 1.2rem);
   line-height: 1.9rem;
+  text-align: justify;
 }
 .colorEffect {
   background: linear-gradient(120deg, #1d27b9, #439FEE);

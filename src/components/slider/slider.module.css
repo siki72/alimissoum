@@ -15,7 +15,7 @@
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.358);
   @media screen and (min-width: 731px){
-    margin-top: 16rem;
+    margin-top: 16rem; 
   }
   @media screen and (min-width: 1149px){
     max-width: 50rem;
@@ -61,5 +61,7 @@
   justify-content: center;
 }
 .img {
-  height: auto;
+  height: 500px;
+  width: 100%;
+  object-fit: contain;
 }

@@ -3,6 +3,7 @@ import Link from 'next/link.js';
 import React, { useState } from 'react';
 import styles from "./navbar.module.css"
 import Image from 'next/image.js';
+import DarkMode from '../darkMode/DarkMode.jsx';
 
 const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -74,6 +75,7 @@ const NavBar = () => {
                 </button>
             </div>
             <ul className={isOpen ? `${styles.active}`: `${styles.ul}`}>
+                <DarkMode />
                 {links.map(link => (
                     <li key={link.id} className={styles.li} onClick={()=> setIsOpen(false)}>
                         <Link href={link.url}>{link.title}</Link>

@@ -5,6 +5,7 @@ import Image from "next/image.js";
 import Skills from "@/components/skills/Skills.jsx";
 import Projects from "@/components/projects/Projects.jsx";
 import Touch from "@/components/touch/Touch.jsx";
+import Button from "@/components/button/Button.jsx";
 const page = () => {
 
   return (
@@ -15,9 +16,9 @@ const page = () => {
           <h2 className={styles.desc}>Bonjour, je suis Ali Missoum</h2>
           <h1 className={styles.text}>Développeur full-stack freelance, Node / Express / SQL / JavaScript / React / Nextjs.</h1>
             <p> <span className={styles.colorEffect}>Ensemble</span>, créons une interface web moderne, offrant une expérience <span className={styles.colorEffect}>utilisateur</span> optimale</p>
-            <button className={styles.btn}>mes projets</button>
+            <Button url={"#projetcs"} text={"mes projets"}/>
             <div className={styles.svgContainer}>
-            <Image className={styles.svg} src="/img/svgHero.svg" width={250} height={250} alt="illustration picture" />
+            <Image className={styles.svg} src="/img/svgPro.svg" width={250} height={250} alt="illustration picture" />
             </div>
         </div>
         <div className={styles.imgcontainer}>

@@ -15,10 +15,10 @@
     padding-top: 3rem;
 }
 .textBox{
+    text-align: justify;
     position: absolute;
     top: 5rem;
     max-width: 90%;
-    text-align: center;
     display: flex;
     flex-direction: column;
     gap: 2rem;

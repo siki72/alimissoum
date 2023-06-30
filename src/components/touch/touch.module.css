@@ -44,6 +44,7 @@
   }
   .textBox{
     text-align: center;
+    text-align: justify;
     @media screen and (min-width: 1152px) {
       max-width: 50%;
     }
