@@ -13,8 +13,14 @@
     flex-direction: column;
     position: relative;
     padding: 3rem 0;
+    background-color: #EFEFEF;
 }
-
+.dark{
+  background-color: #161515;
+}
+.dark::before {
+  background-color: #161515 !important;
+}
 .container::before{
     position: absolute;
     content: "";
@@ -51,7 +57,6 @@
   }
   .title {
     font-size: clamp(2rem, 2vw, 3rem);
-    color: rgb(29, 28, 28);
     text-align: center;
     line-height: 1.9rem;
     letter-spacing: 1px;

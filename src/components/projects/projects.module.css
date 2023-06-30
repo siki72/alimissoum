@@ -7,11 +7,10 @@
     src: url("/fonts/Lora.ttf");
   }
 .container {
-    margin: 2rem 0;
     display: flex;
     justify-content: center;
     position: relative;
-    background-color: white;
+    background-color: transparent;
     padding-top: 3rem;
 }
 .textBox{
@@ -28,7 +27,6 @@
     font-family: "oswald";
     letter-spacing: 2px;
     font-size: clamp(2rem, 2vw, 3rem);
-    color: rgb(29, 28, 28);
     text-align: center;
     line-height: 1.9rem;
     letter-spacing: 1px;

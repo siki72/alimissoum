@@ -1,10 +1,12 @@
 "use client";
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./touch.module.css";
 import Image from "next/image.js";
+import { ThemeContext } from "@/context/themeContextToggle.js";
 const Touch = () => {
+  const {mode} =  useContext(ThemeContext)
   return (
-    <div className={styles.container}>
+    <div className={mode ==="light"? `${styles.container}`: `${styles.container} ${styles.dark}`}>
       <div className={styles.textBox}>
       <h4 className={styles.title}>Contact.</h4>
       <p>

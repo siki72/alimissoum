@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./skills.module.css";
 import Image from "next/image.js";
 import Cards from "../cards/Cards.jsx";
+import { ThemeContext } from "@/context/themeContextToggle.js";
 const Skils = () => {
+  const {mode} =  useContext(ThemeContext)
   const back = [
     {
       id: 1,
@@ -101,7 +103,7 @@ const Skils = () => {
     },
   ];
   return (
-    <div className={styles.container}>
+    <div className={mode === "light" ? `${styles.container}`: `${styles.container} ${styles.dark}`}>
       <div className={styles.textBox}>
         <h3 className={styles.title}>Compétences.</h3>
         <p className={styles.text}>

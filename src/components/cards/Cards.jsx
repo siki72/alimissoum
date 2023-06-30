@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useContext } from 'react';
 import styles from "./cards.module.css"
 import Image from 'next/image.js';
 import { AiOutlineArrowUp } from "react-icons/ai";
@@ -8,8 +8,9 @@ import { SiExpress,SiMongodb, SiNodedotjs, SiMysql,SiHtml5, SiCss3, SiSass,SiTai
   SiNextdotjs, SiVite, SiVisualstudio, SiJirasoftware, SiGit, SiGithub, SiDocker, SiSocketdotio
  } from "react-icons/si";
  import {TbSeo} from "react-icons/tb"
+import { ThemeContext } from '@/context/themeContextToggle.js';
 const Cards = () => {
-
+  const {mode} =  useContext(ThemeContext)
     const back = [
       {
         id:0,
