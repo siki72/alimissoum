@@ -5,7 +5,7 @@ import Image from 'next/image.js';
 import { AiOutlineArrowUp } from "react-icons/ai";
 import { MdOutlineLan, MdOutlineScreenshotMonitor, MdExtension } from "react-icons/md";
 import { SiExpress,SiMongodb, SiNodedotjs, SiMysql,SiHtml5, SiCss3, SiSass,SiTailwindcss, SiBootstrap,SiJavascript, SiReact, SiRedux,
-  SiNextdotjs, SiVite, SiVisualstudio, SiJirasoftware, SiGit, SiGithub, SiDocker, SiSocketdotio
+  SiNextdotjs, SiVite, SiVisualstudio, SiJirasoftware, SiGit, SiGithub, SiDocker, SiSocketdotio,SiGraphql
  } from "react-icons/si";
  import {TbSeo} from "react-icons/tb"
 import { ThemeContext } from '@/context/themeContextToggle.js';
@@ -37,54 +37,59 @@ const Cards = () => {
           title: "Socket.io",
           icon: SiSocketdotio
         },
+        {
+          id:5,
+          title: "Graphql",
+          icon: SiGraphql
+        },
       ]
       const front =[
         {
-          id:5,
+          id:6,
           title: "html",
           icon: SiHtml5
         },
         {
-          id:6,
+          id:7,
           title: "css",
           icon: SiCss3
         },
         {
-          id:7,
+          id:8,
           title: "sass",
           icon: SiSass
         },
         {
-          id:8,
+          id:9,
           title: "Tailwindcss",
           icon: SiTailwindcss
         },
         {
-          id:9,
+          id:10,
           title: "Bootstrap",
           icon: SiBootstrap
         },
         {
-          id:10,
+          id:11,
           title: "Javascript",
           icon: SiJavascript
         },{
-          id:11,
+          id:12,
           title: "React",
           icon: SiReact
         },
         {
-          id:12,
+          id:13,
           title: "Redux",
           icon: SiRedux
         },
         {
-          id:13,
+          id:14,
           title: "Next.js",
           icon: SiNextdotjs
         },
         {
-          id:14,
+          id:15,
           title: "Vite",
           icon: SiVite
         },
@@ -93,32 +98,32 @@ const Cards = () => {
     
       const others = [
         {
-          id:14,
+          id:16,
           title: "Jirasoftware",
           icon: SiJirasoftware
         },
         {
-          id:15,
+          id:17,
           title: "Git",
           icon: SiGit
         },
         {
-          id:16,
+          id:18,
           title: "Github",
           icon: SiGithub
         },
         {
-          id:17,
+          id:19,
           title: "Docker",
           icon: SiDocker
         },
         {
-          id:18,
+          id:20,
           title: "VScode",
           icon: SiVisualstudio
         },
         {
-          id:1,
+          id:21,
           title: "SEO",
           icon: TbSeo
         },
