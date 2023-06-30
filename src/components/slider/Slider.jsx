@@ -10,7 +10,6 @@ const Slider = () => {
       id: 1,
       title: "Sunshine Villas", 
       url: "/img/projects/sunshine-project.png",
-      shortDesc: "application de reservation de villas",
       desc: "Reservation en ligne de villas avec un back-office complet",
       stacks: "Node.js, Sass, JavaScript,SQL, React, Redux Toolkit, Stripe."
     },
@@ -18,24 +17,15 @@ const Slider = () => {
       id: 2,
       title: "restaurent", 
       url: "/img/projects/restau-project.png",
-      shortDesc: "Site vitrine THE RESTO",
-      desc: "Reservation en ligne des tables du restaurent",
-      stacks: "Node.js, Html, Css,Sass, JavaScript, SQL, Email.js."
+      desc: "Site vitrine d'un restaurent réalisé dans le cadre de l'apprentissage de SASS",
+      stacks: "Html, Css, Sass, JavaScript, Email.js."
     },{
       id: 3,
       title: "campus", 
       url: "/img/projects/campus-project.png",
-      shortDesc: " Site vitrine du Gaming Campus",
-      desc: "TP d'application des compétance théoriques.",
-      stacks: "Node.js, Html, Css, Sass, JavaScript,MongoDB."
-    },{
-      id: 4,
-      title: "heluim", 
-      url: "/img/projects/heluim-project.png",
-      shortDesc: "application de reservation de villas",
-      desc: "Reservation en ligne de villas avec un back-office complet",
-      stacks: "Node.js, Sass, JavaScript,SQL, React, Redux Toolkit, Stripe."
-    }
+      desc: "TP d'application des compétance théoriques CSS.",
+      stacks: "Html, Css, Sass, JavaScript."
+    },
   ]
     return (<Swiper
     className={styles.swiper}

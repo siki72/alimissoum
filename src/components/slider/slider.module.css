@@ -7,6 +7,7 @@
   src: url("/fonts/Lora.ttf");
 }
 .swiper {
+  background-image: radial-gradient(circle at -40% -30%, #6E07F3 50%, #ffffff 50%);
   margin-top: 19rem;
   padding-left: 1rem;
   background-color: #EFEFEF;
