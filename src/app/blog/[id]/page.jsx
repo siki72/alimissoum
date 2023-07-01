@@ -1,6 +1,9 @@
+
 import React from 'react';
 
-const page = () => {
+//parmas as arg to get the [id] or [slug] from url after blog
+const Page = ({params}) => {
+    console.log("deuxieme", params)
     return (
         <div>
 article
@@ -8,4 +11,4 @@ article
     );
 };
 
-export default page;
+export default Page;
