@@ -7,7 +7,7 @@ export const GET = async (request) =>{
         await connect()
         const posts = await postModel.find()
         if (posts.length){
-            return new NextResponse (posts, {status: 200})
+            return new NextResponse (JSON.stringify(posts), {status: 200})
         }else {
             return new NextResponse ("not found", {status: 201})
 
