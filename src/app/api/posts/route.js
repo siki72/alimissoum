@@ -4,7 +4,6 @@ import { NextResponse } from "next/server.js"
 
 export const GET = async (request) =>{
     try{
-        await connect()
         const posts = await postModel.find()
         if (posts.length){
             return new NextResponse (JSON.stringify(posts), {status: 200})

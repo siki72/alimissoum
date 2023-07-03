@@ -1,9 +1,11 @@
 import mongoose from "mongoose";
-let postModel;
 
-try {
-  postModel = mongoose.model("Post");
-} catch (err) {
+let postModel
+
+if (mongoose.models.Post){
+  postModel = mongoose.models.Post
+} else {
+
   const postSchema = new mongoose.Schema(
     {
       title: {
@@ -28,7 +30,9 @@ try {
       },
     },
     { timestamps: true }
-  );
-  postModel = mongoose.model("Post", postSchema);
-}
+    );
+    const postModel = mongoose.model("Post", postSchema)
+    
+  }
+  
 export default postModel;
