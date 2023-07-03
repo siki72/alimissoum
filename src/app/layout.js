@@ -3,6 +3,7 @@ import Footer from "@/components/footer/Footer.jsx";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { ThemeCOntextProvider } from "@/context/themeContextToggle.js";
+import AuthProvider from "@/components/AuthProvider/AuthProvider.jsx";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,11 +17,13 @@ export default function RootLayout({ children }) {
     <html lang="fr">
       <body className={inter.className}>
         <ThemeCOntextProvider>
-          <div className="container">
-            <NavBar />
-            {children}
-            <Footer />
-          </div>
+          <AuthProvider>
+            <div className="container">
+              <NavBar />
+              {children}
+              <Footer />
+            </div>
+          </AuthProvider>
         </ThemeCOntextProvider>
       </body>
     </html>
