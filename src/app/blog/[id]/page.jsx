@@ -15,15 +15,18 @@ async function getaSinglePost (id){
         return notFound()
     }
 }
-export async function generateMetadata({ params }) {
+
+ export async function generateMetadata({params}) {
+
     const post = await getaSinglePost(params.id)
     return {
       title: post.title,
-      
+      description: post.desc
     }
   }
 //parmas as arg to get the [id] or [slug] from url after blog
 const Page = async ({params}) => {
+
     const data = await getaSinglePost(params.id)
     return (
         <div className={styles.container}>
