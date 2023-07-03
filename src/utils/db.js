@@ -6,5 +6,5 @@ const connect = async()=>{
         throw new Error ("connection failed !")
     }
 }
-connect()
+
 export default connect

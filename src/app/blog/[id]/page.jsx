@@ -1,20 +1,27 @@
 import Image from 'next/image.js';
 import React from 'react';
 import styles from "./page.module.css"
+import { notFound } from 'next/navigation'
 async function getaSinglePost (id){
     try{
         const response = await fetch(`http://localhost:3000/api/posts/${id}`, {
             cache: "no-store"
-        })
-        if (response.status === 200) {
-            const data = await response.json()
-            return data
+        });
+        if (!response.ok) {
+            return notFound()
         }
-        return Error("failed to fetch post")
+        return response.json()
     }catch(err){
-        console.log(err)
+        return notFound()
     }
 }
+export async function generateMetadata({ params }) {
+    const post = await getaSinglePost(params.id)
+    return {
+      title: post.title,
+      
+    }
+  }
 //parmas as arg to get the [id] or [slug] from url after blog
 const Page = async ({params}) => {
     const data = await getaSinglePost(params.id)

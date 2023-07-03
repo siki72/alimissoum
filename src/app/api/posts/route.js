@@ -2,6 +2,7 @@ import postModel from "@/models/Post.js"
 import connect from "@/utils/db.js"
 import { NextResponse } from "next/server.js"
 
+connect()
 export const GET = async (request) =>{
     try{
         const posts = await postModel.find()
