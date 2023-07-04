@@ -8,14 +8,14 @@
 }
 .swiper {
   background-image: radial-gradient(circle at -40% -30%, #6E07F3 50%, #ffffff 50%);
-  margin-top: 19rem;
+  margin-top: 24rem;
   padding-left: 1rem;
   background-color: #EFEFEF;
   max-width: 90%;
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.358);
   @media screen and (min-width: 731px){
-    margin-top: 16rem; 
+    margin-top: 25rem; 
   }
   @media screen and (min-width: 1149px){
     max-width: 50rem;

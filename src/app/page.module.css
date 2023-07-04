@@ -9,7 +9,7 @@
 .container {
   position: relative;
 }
-.gradient{
+/* .gradient{
   display: none;
   @media screen and (min-width: 768px) {
     display: block;
@@ -22,7 +22,7 @@
   background-repeat: no-repeat;
   top: 0;
   }
-}
+} */
 .hero {
   display: flex;
   align-items: center;
@@ -32,7 +32,6 @@
   overflow: hidden;
 }
 .welcom {
-  
   text-align: center;
   display: flex;
   align-items: center;
@@ -100,7 +99,6 @@
   @media screen and (min-width: 1240px) {
     display: block;
     position: absolute;
-    
     right: 6.5rem;
     max-width: 22rem;
     transform: translateX(200%);
@@ -126,25 +124,7 @@
 .svg{
   width: 100%;
   height: auto;
-}/* 
-.btn {
-  font-family: "oswald";
-  letter-spacing: 3px;
-  font-size: clamp(1rem, 2vw, 1rem);
-  margin-top: 2rem;
-  padding: 1.3rem 3rem;
-  border: none;
-  text-transform: uppercase;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.358);
-  border-radius: 0.5rem;
-  color: white;
-  cursor: pointer;
-  background-color: #6E07F3;
-  transition: all 0.3s ease-in-out;
 }
-.btn:hover{
-  transform: translateY(-0.5rem);
-} */
 .textContainer {
   padding-top: 4rem;
   font-size: 1.5rem;
@@ -161,30 +141,35 @@
   position: relative;
   z-index: 1;
   border: 1px solid rgba(114, 103, 103, 0.739);
-  background-color: #0d080a;
-  border-radius: 1rem;
+  background-color: #6E07F3;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.358);
+  min-height: 30rem;
   @media screen and (min-width: 1240px) {
     margin-top: -3rem;
-    width: 70%;
-    padding-bottom: 3rem;
+    padding-bottom: 13rem;
   }
 }
-.imgcontainer h1 {
+.imgcontainer h3 {
   display: flex;
+  font-family: "lora";
   flex-direction: column;
+  letter-spacing: 2px;
   gap: 2rem;
   color: white;
-  font-size: 1.7rem;
+  font-size: clamp(1.9rem, 3vw, 2.1rem);
+  text-align: center;
+  line-height:  clamp(2.3rem, 2vw, 2.5rem);
+  padding-top: 2rem;
+  
 }
 .imgrounder{
   border-radius: 50%;
   z-index: 1;
-   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.358);
+   box-shadow: 0 4px 6px #6E07F3;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
+  background-color: #6E07F3;
 }
 .imgcontainer p{
   margin-top: 1rem;
@@ -193,10 +178,11 @@
   text-align: center;
   line-height: 2rem;
   z-index: 1;
-  color: rgb(255, 255, 255);
+  color: rgb(228, 224, 224);
   font-family: "lora";
   @media screen and (min-width: 1240px) {
-    max-width: 70%;
+    max-width: 50%;
+    text-align: justify;
   }
 }
 .img {

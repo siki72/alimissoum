@@ -10,10 +10,10 @@
   position: relative;
   background-color: transparent;
   margin-top: 6rem;
-  background-color: #EFEFEF;
   @media screen and (min-width: 1240px) {
-    margin: 0;
-    padding: 3rem 0;
+    max-width: 90%;
+    margin: -2rem auto;
+    z-index: 1;
   }
 }
 .dark{
@@ -27,17 +27,8 @@
   margin: 0 auto;
   @media screen and (min-width: 1152px) {
     max-width: 50%;
+    margin: 0 auto;
   }
-}
-.container::before{
-  position: absolute;
-  background-color: #EFEFEF;
-  content: "";
-  width: 100%;
-  height: 12rem;
-  top: -12rem;
-  z-index: 0;
-  border-top-left-radius: 10rem;
 }
 
 

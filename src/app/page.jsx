@@ -22,9 +22,7 @@ const page = () => {
             </div>
         </div>
         <div className={styles.imgcontainer}>
-          <div className={styles.imgrounder}>
-            <Image className={styles.img} src="/img/profile.png" width={80} height={80} alt="pic" />
-          </div>
+          <h3>Bienvenue sur mon portfolio</h3>
           <p>  
           Je suis un développeur full-stack freelance orienté front-end , basé sur Le Mans. Vous trouverez ici plus d&apos;informations sur moi, ce que je fais, et mes compétences actuelles. Je suis ouvert aux opportunités d&apos;emploi où je peux collaborer, apprendre et accroître mes compétences. Si vous avez un projet à réaliser, n&apos;hésitez pas à me contacter. </p> 
         </div>

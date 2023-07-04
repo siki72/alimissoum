@@ -3,8 +3,6 @@ import Footer from "@/components/footer/Footer.jsx";
 import "./globals.css";
 import { ThemeCOntextProvider } from "@/context/themeContextToggle.js";
 import AuthProvider from "@/components/AuthProvider/AuthProvider.jsx";
-import Head from "next/head.js";
-
 
 
 export const metadata = {
@@ -18,7 +16,6 @@ export default function RootLayout({ children }) {
       <body >
         <ThemeCOntextProvider>
           <AuthProvider>
-
           <div className="container">
             <NavBar />
             {children}
