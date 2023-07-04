@@ -37,6 +37,7 @@
   height: 12rem;
   top: -12rem;
   z-index: 0;
+  border-top-left-radius: 10rem;
 }
 
 

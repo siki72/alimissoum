@@ -19,7 +19,7 @@ const Blog = async () => {
     const data = await fetchDatas()
     return (
         <div className={styles.container}>
-             {data.map(item=>(
+             {data?.map(item=>(
                 <Link href={`/blog/${item._id}`} className={styles.postContainer} key={item.id}>
                     <h3 className={styles.title}>{item.title}</h3>
                     <p className={styles.desc}> {item.desc}</p>

@@ -39,8 +39,8 @@ const Slider = () => {
           clickable: true,
         }}
         modules={[Autoplay, Pagination, Navigation, Mousewheel]}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
+       /*  onSlideChange={() => console.log('slide change')}
+        onSwiper={(swiper) => console.log(swiper)} */
       >
         {projects.map(projet =>(
           <SwiperSlide key={projet.id}>

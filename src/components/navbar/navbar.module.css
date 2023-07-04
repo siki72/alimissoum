@@ -1,7 +1,4 @@
-@font-face {
-  font-family: "public";
-  src: url("/fonts/PublicSans.ttf");
-}
+
 .container {
   padding: 1rem;
   display: flex;
@@ -14,8 +11,7 @@
 }
 
 .logoImg{
-  width: 100%;
-  height: auto;
+
 }
 .dark {
   fill: white;

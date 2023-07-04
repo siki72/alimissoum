@@ -50,8 +50,8 @@
     text-align: left;
     display: flex;
     align-items: flex-start;
+    min-height: 45rem;
     justify-content: center;
-    min-height: 100svh;
     max-width: 90%;
     margin: 0;
     padding-top: 5rem;
@@ -88,8 +88,8 @@
 }
 .welcom p{
   font-family: "oswald";
-  font-size:  clamp(1.9rem, 3vw, 2rem );
-  line-height: clamp(3rem, 4vw, 4rem );
+  font-size:  clamp(1.9rem, 3vw, 4rem );
+  line-height: clamp(3rem, 4vw, 4.5rem );
   text-transform: uppercase;
   @media screen and (min-width: 1240px) {
     max-width: 45%;
@@ -201,6 +201,7 @@
 }
 .img {
   height: auto;
+  width: auto;
   transform: rotate(15deg);
   border-radius: 50%;
 }

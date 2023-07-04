@@ -7,7 +7,7 @@ const footer = () => {
     return (
         <div className={styles.container}>
             <div className={styles.signature}>
-                <Image className={styles.logoImg} src="/img/logoali.png" width={100} height={80} alt='logo picture' />
+                <Image className={styles.logoImg} src="/img/logoali.png" width={100} height={70} alt='logo picture' />
             </div>
             <div className={styles.textBox}>
                 <p>2023 © Ali Missoum <br />- Le Mans, FRANCE - SIRET n° - contact@alimissoum.com</p>
