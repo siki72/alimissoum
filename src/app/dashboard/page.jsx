@@ -2,7 +2,7 @@
 import { useSession } from 'next-auth/react';
 import React from 'react';
 import useSWR from "swr"
-const Page = () => {
+const Dashboard = () => {
     const session = useSession()
     console.log(session)
     return (
@@ -12,4 +12,4 @@ const Page = () => {
     );
 };
 
-export default Page;
+export default Dashboard;

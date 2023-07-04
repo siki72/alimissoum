@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import styles from "./page.module.css";
 import Link from "next/link.js";
 import { useRouter } from "next/navigation.js";
-const page = () => {
+const Register = () => {
   const router = useRouter()
     const [err, setErr] = useState(false)
     const handleSubmit = async (e)=>{
@@ -29,15 +29,15 @@ const page = () => {
       }
     }
   return (
-    <div className={styles.container} onSubmit={handleSubmit}>
-      <form className={styles.form}>
-        <input type="text" placeholder="username" className={styles.input} required/>
-        <input type="mail" placeholder="email" className={styles.input} required/>
+    <div className={styles.container} >
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <input type="text" placeholder="username" className={styles.input} required={true}/>
+        <input type="mail" placeholder="email" className={styles.input} required={true}/>
         <input
           type="password"
           placeholder="password"
           className={styles.input}
-          required
+          required={true}
         />
         <button type="submit" className={styles.btn}>Register</button>
       </form>
@@ -46,4 +46,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Register;

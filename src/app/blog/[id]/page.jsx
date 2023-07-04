@@ -25,7 +25,7 @@ async function getaSinglePost (id){
     }
   }
 //parmas as arg to get the [id] or [slug] from url after blog
-const Page = async ({params}) => {
+const SinglePost = async ({params}) => {
 
     const data = await getaSinglePost(params.id)
     return (
@@ -42,4 +42,4 @@ const Page = async ({params}) => {
     );
 };
 
-export default Page;
+export default SinglePost;

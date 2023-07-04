@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next'
 
-const page = () => {
+const Contact = () => {
     return (
         <div>
             contact
@@ -9,4 +9,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Contact;

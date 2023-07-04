@@ -1,8 +1,5 @@
 import mongoose from "mongoose";
-let userModel
-if (mongoose.models.User){
-  userModel = mongoose.models.User
-} else {
+
 
   const userSchema = new mongoose.Schema({
     name: {
@@ -25,6 +22,6 @@ if (mongoose.models.User){
     
     
   }, {timestamps: true});
-  const userModel = mongoose.model("User", userSchema)
-}
-export default userModel
+  
+
+export default mongoose.models.User || mongoose.model("User", userSchema);
