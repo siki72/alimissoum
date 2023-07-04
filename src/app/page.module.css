@@ -132,21 +132,20 @@
 }
 .imgcontainer {
   margin-top: 3rem;
-  padding: 2rem;
+  padding: 4rem;
   max-width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   position: relative;
   z-index: 1;
   border: 1px solid rgba(114, 103, 103, 0.739);
   background-color: #6E07F3;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.358);
-  min-height: 30rem;
+  min-height: 40rem;
   @media screen and (min-width: 1240px) {
     margin-top: -3rem;
-    padding-bottom: 13rem;
   }
 }
 .imgcontainer h3 {
@@ -178,6 +177,7 @@
   text-align: center;
   line-height: 2rem;
   z-index: 1;
+  
   color: rgb(228, 224, 224);
   font-family: "lora";
   @media screen and (min-width: 1240px) {

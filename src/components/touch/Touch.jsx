@@ -10,7 +10,7 @@ const Touch = () => {
       <div className={styles.textBox}>
       <h4 className={styles.title}>Contact.</h4>
       <p>
-      Vous êtes intéressé par une collaboration avec moi ? Je suis ouvert à la discussion concernant la conception et le développement de votre application, ainsi que les opportunités de partenariat. N&apos;hésitez pas à me <span className={styles.colorEffect}>contacter</span> .
+      Vous êtes intéressé par une collaboration avec moi ? Je suis ouvert à la discussion concernant la conception et le développement de votre application, ainsi que les opportunités de partenariat. N&apos;hésitez pas à me <span >contacter</span> .
       </p>
       </div>
       <form action="" method="post" className={styles.form}>

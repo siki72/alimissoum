@@ -30,6 +30,16 @@
     margin: 0 auto;
   }
 }
+.container::before{
+  position: absolute;
+  background-color: white;
+  content: "";
+  width: 100%;
+  height: 12rem;
+  top: -8rem;
+  z-index: 0;
+  border-radius: 1rem;
+}
 
 
 .title {
@@ -57,7 +67,7 @@
   font-family: "lora";
   font-size: clamp(1.1rem, 1.5vw, 1.2rem);
   line-height: 1.9rem;
-  text-align: justify;
+  
 }
 .colorEffect {
   background: linear-gradient(120deg, #1d27b9, #439FEE);
