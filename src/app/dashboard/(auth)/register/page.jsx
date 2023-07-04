@@ -1,11 +1,24 @@
 "use client"
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import Link from "next/link.js";
 import { useRouter } from "next/navigation.js";
+import { useSession } from "next-auth/react";
 const Register = () => {
   const router = useRouter()
     const [err, setErr] = useState(false)
+    const {data: sessiosn, status} =  useSession()
+    useEffect(() => {
+        if (status === "unauthenticated") {
+          router.push("/dashboard/login");
+        }
+        if (status === "authenticated"){
+            router.push("/dashboard")
+        }
+      }, [status]);
+      if (status === "loading"){
+        return <p>loading ...</p>
+    }
     const handleSubmit = async (e)=>{
         e.preventDefault()
         const name = e.target[0].value
