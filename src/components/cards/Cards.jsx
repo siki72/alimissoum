@@ -158,7 +158,7 @@ const Cards = () => {
     </div>      
   </li>
   <li>
-  <div className={`${styles.card} ${styles.cardFront}`}>
+  <div className={mode === "light" ? `${styles.card} ${styles.cardFront}`: `${styles.dark} ${styles.cardFront} ${styles.card}`}>
       <div className={styles.technosHeader}>
       <MdOutlineScreenshotMonitor className={styles.iconTechnos}/>
       <h3 className={styles.title}>Front-end</h3>

@@ -5,6 +5,7 @@ import Image from "next/image.js";
 import { ThemeContext } from "@/context/themeContextToggle.js";
 const Touch = () => {
   const {mode} =  useContext(ThemeContext)
+  console.log("mode depuis forme", mode)
   return (
     <div className={mode ==="light"? `${styles.container}`: `${styles.container} ${styles.dark}`}>
       <div className={styles.textBox}>
@@ -13,7 +14,7 @@ const Touch = () => {
       Vous êtes intéressé par une collaboration avec moi ? Je suis ouvert à la discussion concernant la conception et le développement de votre application, ainsi que les opportunités de partenariat. N&apos;hésitez pas à me <span >contacter</span> .
       </p>
       </div>
-      <form action="" method="post" className={styles.form}>
+      <form action="" method="post" className={mode ==="dark" ? `${styles.form} ${styles.dark}`: `${styles.form} ${styles.whiteBg}`}>
         <div className={`${styles.inputContainer} ${styles.ic1}`}>
           <input
             type="text"
@@ -21,7 +22,7 @@ const Touch = () => {
             className={styles.input}
             placeholder=""
           />
-          <div className={styles.cut}></div>
+          <div className={mode === "light" ? `${styles.cut} ${styles.whiteBg}` : `${styles.dark} ${styles.cut}`}></div>
           <label htmlFor="firstName" className={styles.label}>
             Nom
           </label>
@@ -33,7 +34,7 @@ const Touch = () => {
             className={styles.input}
             placeholder=""
           />
-          <div className={`${styles.cut} ${styles.cutpre}`}></div>
+          <div className={mode === "light" ? `${styles.cut} ${styles.cutpre} ${styles.whiteBg}`: `${styles.cut} ${styles.cutpre} ${styles.dark}`} ></div>
           <label htmlFor="lastName" className={styles.label}>
             Prénom
           </label>
@@ -45,7 +46,7 @@ const Touch = () => {
             className={styles.input}
             placeholder=""
           />
-          <div className={`${styles.cut} ${styles.short}`}></div>
+          <div className={mode === "light" ? `${styles.cut} ${styles.short}`: `${styles.cut} ${styles.dark}`}></div>
           <label htmlFor="email" className={styles.label}>
             Email
           </label>
@@ -57,7 +58,7 @@ const Touch = () => {
             className={styles.input}
             placeholder=""
           />
-          <div className={`${styles.cut} ${styles.cuttel}`}></div>
+          <div className={mode === "light" ? `${styles.cut} ${styles.cuttel} ${styles.whiteBg}` : `${styles.cut} ${styles.cuttel} ${styles.dark}`}></div>
           <label htmlFor="phone" className={styles.label}>
             Téléphone
           </label>
@@ -70,7 +71,7 @@ const Touch = () => {
             className={styles.input}
             placeholder=""
           />
-          <div className={`${styles.cut} ${styles.cutmes}`}></div>
+          <div className={mode === "light" ? `${styles.cut} ${styles.cutmes} ${styles.whiteBg}` : `${styles.cut} ${styles.cutmes} ${styles.dark}`}></div>
           <label htmlFor="message" className={styles.label}>
             Message
           </label>

@@ -17,10 +17,10 @@
   }
 }
 .dark{
-  background-color: #161515;
+  background-color: #000000;
 }
 .dark::before {
-  background-color: #161515 !important;
+  background-color: #000000 !important;
 }
 .textBox{
   max-width: 90%;

@@ -24,8 +24,6 @@ export const GET = async (request) =>{
 export const POST = async (request) =>{
     // pour recuperer body
     const body = await request.json()
-    console.log("called")
-    console.log(body)
     const newPost = new postModel(body)
     try{
         await connect()

@@ -5,8 +5,9 @@
     justify-content: center;
     align-items: center;
     gap: 3rem;
-    min-height: 19rem;
+    min-height: 20rem;
     position: relative;
+    padding: 2rem;
 }
 .logoImg {
 
@@ -41,3 +42,7 @@
 .icon {
     color: #439fee;
 }
+.logoImg{
+    width: auto;
+    height: auto;
+  }

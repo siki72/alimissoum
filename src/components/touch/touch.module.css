@@ -7,7 +7,6 @@
   src: url("/fonts/Lora.ttf");
 }
 .container {
-    padding: 3rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,10 +14,14 @@
     position: relative;
     background-color: transparent;
     position: relative;
-    margin: 8rem 0;
+    margin-top: 8rem ;
+    padding-bottom: 6rem;
 }
 .dark{
-  background-color: #161515;
+  background-color: #171717;
+}
+.whiteBg{
+  background-color: white;
 }
 .dark::before {
   background-color: #161515 !important;
@@ -31,7 +34,6 @@
 }
   .form {
     margin-top: -6rem;
-    background-color: rgb(255, 255, 255);
     border-radius: 1rem;
     width: 90%;
     padding: 3rem 0;
@@ -88,8 +90,11 @@
     margin: 0 auto;
     line-height: 1.7rem;
     color: #E4E0E0;
-    @media screen and (min-width: 1152px) {
-      max-width: 50%;
+    @media screen and (min-width: 1240px) {
+      text-align: justify;
+      text-align: center;
+      max-width: 60%;
+      padding-top: 2rem;
     }
   }
   .label{
@@ -116,12 +121,14 @@
 }
 .cut {
   position: absolute;
-  background-color:  rgb(255, 255, 255);
   width: 3rem;
   height: 0.5rem;
   top: 0.8rem;
   left: 0.6rem;
   display: none;
+}
+.short{
+  background-color: white;
 }
 .cuttel{
   width: 5.2rem;

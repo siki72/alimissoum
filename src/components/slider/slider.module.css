@@ -13,7 +13,7 @@
   background-color: #EFEFEF;
   max-width: 90%;
   border-radius: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.358);
+  box-shadow: 0 4px 6px rgba(56, 53, 53, 0.358);
   @media screen and (min-width: 731px){
     margin-top: 25rem; 
   }
@@ -21,6 +21,9 @@
     max-width: 50rem;
     
   }
+}
+.darkBackground{
+  background-image: radial-gradient(circle at -40% -30%, #6E07F3 50%, #171717 50%)
 }
 
 .textContainer {
@@ -35,23 +38,20 @@
 .textContainer h4 {
   font-size: 0.7rem;
   text-transform: uppercase;
-  color: rgba(48, 45, 45, 0.795);
 }
 .textContainer h3 {
   font-family: "oswald";
   font-size: 1.5rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgb(0, 0, 0);
 }
 .textContainer h5 {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
-  color: rgba(160, 158, 158, 0.795);
-  
+  font-family: "lora";
+  letter-spacing: 1px;
 }
 .textContainer p {
-  color: rgb(48, 47, 47);
   font-family: "lora";
   margin-bottom: 3rem;
 }

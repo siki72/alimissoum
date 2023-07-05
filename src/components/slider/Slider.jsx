@@ -1,10 +1,13 @@
 import Image from 'next/image.js';
-import React from 'react';
+import React, { useContext } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, Navigation, Mousewheel } from "swiper";
 import 'swiper/swiper-bundle.min.css';
 import styles from "./slider.module.css"
+import { ThemeContext } from '@/context/themeContextToggle.js';
 const Slider = () => {
+  const {mode} = useContext(ThemeContext)
+
   const projects = [
     {
       id: 1,
@@ -28,7 +31,7 @@ const Slider = () => {
     },
   ]
     return (<Swiper
-    className={styles.swiper}
+    className={mode === "dark" ? `${styles.swiper} ${styles.darkBackground}`: `${styles.swiper}`}
         spaceBetween={50}
         slidesPerView={1}
         autoplay={{

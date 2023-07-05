@@ -11,7 +11,8 @@
 }
 
 .logoImg{
-
+  width: auto;
+  height: auto;
 }
 .dark {
   fill: white;
