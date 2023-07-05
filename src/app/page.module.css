@@ -189,3 +189,35 @@
   -webkit-text-fill-color: transparent;
 }
 
+.btn{
+  font-family: "oswald";
+  letter-spacing: 3px;
+  font-size: clamp(1rem, 2vw, 1rem);
+  margin-top: 2rem;
+  padding: 1.3rem 3rem;
+  border: none;
+  text-transform: uppercase;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.358);
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+  background-color: #6E07F3;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover{
+  transform: translateY(-0.5rem);
+}
+.laptopContainer{
+  display: none;
+  @media screen and (min-width:  1240px) {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.laptopImg{
+  width: auto;
+  height: auto;
+}

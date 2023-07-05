@@ -5,7 +5,6 @@ import Image from "next/image.js";
 import Skills from "@/components/skills/Skills.jsx";
 import Projects from "@/components/projects/Projects.jsx";
 import Touch from "@/components/touch/Touch.jsx";
-import Button from "@/components/button/Button.jsx";
 const page = () => {
   const scrollToPRojects = ()=>{
     const projectSection = document.getElementById("project");
@@ -14,13 +13,17 @@ const page = () => {
   }
   return (
     <div className={styles.container}>
+      
       <div className={styles.gradient}></div>
       <section className={styles.hero}>
         <div className={styles.welcom}>
+     {/*    <div className={styles.laptopContainer}>
+        <Image className={styles.laptopImg} src="/img/laptop.png" width={400} height={350} alt=""laptop picture />
+      </div> */}
           <h2 className={styles.desc}>Bonjour, je suis Ali Missoum</h2>
           <h1 className={styles.text}>Développeur full-stack freelance, Node / Express / SQL / JavaScript / React / Nextjs.</h1>
             <p> <span className={styles.colorEffect}>Ensemble</span>, créons une interface web moderne, offrant une expérience <span className={styles.colorEffect}>utilisateur</span> optimale</p>
-            <button onClick={scrollToPRojects}>mes projets</button>{/* 
+            <button className={styles.btn} onClick={scrollToPRojects}>mes projets</button>{/* 
             <Button url={"#projetcs"} text={"mes projets"} /> */}
             <div className={styles.svgContainer}>
             <Image className={styles.svg} src="/img/svgPro.svg" width={250} height={250} alt="illustration picture" />
