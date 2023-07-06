@@ -31,8 +31,26 @@ const Touch = () => {
     setLoading(true)
     e.preventDefault();
     if (form.current) {
-      const data = new FormData(form.current)
-      const email = data.get("email")
+      const data = new FormData(form.current);
+      const fields = {
+        Nom: "name",
+        Prénom: "lastName",
+        Email: "email",
+        Téléphone: "phone",
+        Message: "message"
+      }
+      for (const [key, value] of Object.entries(fields)){
+        const fieldValue = data.get(value)
+        console.log(`${key} : ${fieldValue}`)
+
+      if ((key === "Téléphone" && fieldValue.length <10) || (fieldValue.length < 2)) {
+          setMailError(true)
+          await errorRef.current
+          setLoading(false)
+          return errorRef.current.innerText = `Veuillez bien renseigner le champ : ${key}`
+        } 
+      }
+
       if (!validator.isEmail(email) ){
         setMailError(true)
         await errorRef.current
@@ -42,8 +60,10 @@ const Touch = () => {
       }
       emailjs.sendForm(process.env.NEXT_PUBLIC_MY_SERVICE_ID, process.env.NEXT_PUBLIC_MY_TEMPLATE_ID, form.current, process.env.NEXT_PUBLIC_MY_PUBLIC_KEY)
       .then((result) => {
-        result.status === 200 && setSuccess(true)
-        setLoading(false)
+        if (result.status === 200){
+          setSuccess(true)
+          setLoading(false)
+        }
       }, (error) => {
         setError(true)
         console.log(error);
