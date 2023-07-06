@@ -50,12 +50,12 @@ const Touch = () => {
           return errorRef.current.innerText = `Veuillez bien renseigner le champ : ${key}`
         } 
       }
-
+      const email= data.get('email')
       if (!validator.isEmail(email) ){
+        setLoading(false)
         setMailError(true)
         await errorRef.current
         errorRef.current.innerText = "Veuillez saisir un email valide"
-        setLoading(false)
         return
       }
       emailjs.sendForm(process.env.NEXT_PUBLIC_MY_SERVICE_ID, process.env.NEXT_PUBLIC_MY_TEMPLATE_ID, form.current, process.env.NEXT_PUBLIC_MY_PUBLIC_KEY)
