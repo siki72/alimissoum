@@ -5,11 +5,15 @@ import Image from "next/image.js";
 import { ThemeContext } from "@/context/themeContextToggle.js";
 import emailjs from '@emailjs/browser';
 import Loading from "../loading/Loading.jsx";
+import validator from 'validator';
 const Touch = () => {
+  const form = useRef(null)
+  const errorRef = useRef(null)
   const [success, setSuccess] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
-  const form = useRef(null)
+  const [mailError, setMailError] = useState(false)
+
   const {mode} =  useContext(ThemeContext)
   useEffect(()=> {
     if (success){
@@ -23,18 +27,29 @@ const Touch = () => {
       },3000)
     }
   }, [success, error])
-  const sendEmail = (e)=>{
+  const sendEmail = async  (e)=>{
     setLoading(true)
     e.preventDefault();
-    emailjs.sendForm(process.env.NEXT_PUBLIC_MY_SERVICE_ID, process.env.NEXT_PUBLIC_MY_TEMPLATE_ID, form.current, process.env.NEXT_PUBLIC_MY_PUBLIC_KEY)
-    .then((result) => {
-      result.status === 200 && setSuccess(true)
-      setLoading(false)
-  }, (error) => {
-    setError(true)
-      console.log(error);
-      setLoading(false)
-  });
+    if (form.current) {
+      const data = new FormData(form.current)
+      const email = data.get("email")
+      if (!validator.isEmail(email) ){
+        setMailError(true)
+        await errorRef.current
+        errorRef.current.innerText = "Veuillez saisir un email valide"
+        setLoading(false)
+        return
+      }
+      emailjs.sendForm(process.env.NEXT_PUBLIC_MY_SERVICE_ID, process.env.NEXT_PUBLIC_MY_TEMPLATE_ID, form.current, process.env.NEXT_PUBLIC_MY_PUBLIC_KEY)
+      .then((result) => {
+        result.status === 200 && setSuccess(true)
+        setLoading(false)
+      }, (error) => {
+        setError(true)
+        console.log(error);
+        setLoading(false)
+      });
+    }
   }
 
   return (
@@ -46,7 +61,10 @@ const Touch = () => {
       Vous êtes intéressé par une collaboration avec moi ? Je suis ouvert à la discussion concernant la conception et le développement de votre application, ainsi que les opportunités de partenariat. N&apos;hésitez pas à me <span >contacter</span> .
       </p>
       </div>
-      <form  onSubmit={sendEmail} ref={form} className={mode ==="dark" ? `${styles.form} ${styles.dark}`: `${styles.form} ${styles.whiteBg}`}>
+      <form  onClick={()=> setMailError(false)} onSubmit={sendEmail} ref={form} className={mode ==="dark" ? `${styles.form} ${styles.dark}`: `${styles.form} ${styles.whiteBg}`}>
+        {mailError && <div className={styles.errorMessage} >
+          <span ref={errorRef}></span>
+          </div>} 
         <div className={`${styles.inputContainer} ${styles.ic1}`}>
           <input
             type="text"

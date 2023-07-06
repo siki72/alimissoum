@@ -43,6 +43,24 @@
       width: 40rem;
     }
   }
+  .errorMessage{
+    text-align: center;
+    margin: 1rem auto;
+    min-width: 90%;
+    background-color: rgb(213, 98, 98);
+    height: 4rem;
+    margin-top: -3.05rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: clamp(1.3rem, 2vw, 1.5rem);
+    font-family: "lora";
+    letter-spacing: 1px;
+  }
   .textBox{
     min-height: 30rem;
     background-color: #6E07F3;
@@ -85,7 +103,7 @@
   }
   .textBox p {
     font-family: "lora";
-    font-size: clamp(1.1rem, 1.5vw, 1.2rem);;
+    font-size: clamp(1.1rem, 1.5vw, 1.2rem);
     max-width: 90%;
     margin: 0 auto;
     line-height: 1.7rem;
@@ -118,6 +136,8 @@
     outline: 0;
     background-color: transparent;
     border-radius: 1rem;
+    color: #6E07F3;
+    font-size: clamp(1.1rem, 1.5vw, 1.2rem);
 }
 .cut {
   position: absolute;
@@ -152,15 +172,11 @@
   color: transparent;
   transform: 0.1s;
 }
+/* touts les inputs qui n'ont pas de focus et qui'ils ont du text inside */
 .input:not(:focus):not(:placeholder-shown) ~ .label {
  /*  color: transparent; */
   color: rgba(93, 92, 92, 0);
 }
-
-/* .input:not(:focus):not(:placeholder-shown) ~ .label {
-
-  color: rgba(255, 0, 0, 0);
-} */
  .input:focus ~ .cut {
   display: block;
 }
