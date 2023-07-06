@@ -101,7 +101,7 @@
     position: absolute;
     top: 2rem;
     left: 20px;
-    color: rgb(169, 161, 161);
+    color: rgba(169, 161, 161, 0);
     left: 1rem;
     transition: 0.3s;
     font-size: 1rem;
@@ -148,6 +148,19 @@
   font-size: 0.9rem;
   color: #439fee;
 }
+.input:focus::placeholder {
+  color: transparent;
+  transform: 0.1s;
+}
+.input:not(:focus):not(:placeholder-shown) ~ .label {
+ /*  color: transparent; */
+  color: rgba(93, 92, 92, 0);
+}
+
+/* .input:not(:focus):not(:placeholder-shown) ~ .label {
+
+  color: rgba(255, 0, 0, 0);
+} */
  .input:focus ~ .cut {
   display: block;
 }
@@ -168,3 +181,13 @@
   transform: translateY(-10%)
 }
 
+
+.success {
+  background-color: green;
+  transition: all 0.3s;
+}
+
+.failed{
+  background-color: red;
+  transition: all 0.4s;
+}

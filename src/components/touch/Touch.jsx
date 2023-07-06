@@ -1,23 +1,34 @@
 "use client";
-import React, { useContext, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import styles from "./touch.module.css";
 import Image from "next/image.js";
 import { ThemeContext } from "@/context/themeContextToggle.js";
 import emailjs from '@emailjs/browser';
 import Loading from "../loading/Loading.jsx";
 const Touch = () => {
-  const [success, setSuccess] = useState(null)
-  const [loading, setLoading] = useState(true)
+  const [success, setSuccess] = useState(false)
+  const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
   const form = useRef(null)
   const {mode} =  useContext(ThemeContext)
+  useEffect(()=> {
+    if (success){
+      setTimeout(()=>{
+        setSuccess(false)
+      },3000)
+    }
+    if (error){
+      setTimeout(()=>{
+        setError(false)
+      },3000)
+    }
+  }, [success, error])
   const sendEmail = (e)=>{
     setLoading(true)
     e.preventDefault();
     emailjs.sendForm(process.env.NEXT_PUBLIC_MY_SERVICE_ID, process.env.NEXT_PUBLIC_MY_TEMPLATE_ID, form.current, process.env.NEXT_PUBLIC_MY_PUBLIC_KEY)
     .then((result) => {
       result.status === 200 && setSuccess(true)
-      console.log(result);
       setLoading(false)
   }, (error) => {
     setError(true)
@@ -41,7 +52,7 @@ const Touch = () => {
             type="text"
             id={styles.firstName}
             className={styles.input}
-            placeholder=""
+            placeholder="Nom"
             name="name"
           />
           <div className={mode === "light" ? `${styles.cut} ${styles.whiteBg}` : `${styles.dark} ${styles.cut}`}></div>
@@ -54,7 +65,7 @@ const Touch = () => {
             type="text"
             id={styles.lastName}
             className={styles.input}
-            placeholder=""
+            placeholder="Prénom"
             name="lastName"
           />
           <div className={mode === "light" ? `${styles.cut} ${styles.cutpre} ${styles.whiteBg}`: `${styles.cut} ${styles.cutpre} ${styles.dark}`} ></div>
@@ -67,7 +78,7 @@ const Touch = () => {
             type="email"
             id={styles.email}
             className={styles.input}
-            placeholder=""
+            placeholder="Email"
             name="email"
           />
           <div className={mode === "light" ? `${styles.cut} ${styles.short}`: `${styles.cut} ${styles.dark}`}></div>
@@ -80,7 +91,7 @@ const Touch = () => {
             type="phone"
             id={styles.phone}
             className={styles.input}
-            placeholder=""
+            placeholder="Téléphone"
             name="phone"
           />
           <div className={mode === "light" ? `${styles.cut} ${styles.cuttel} ${styles.whiteBg}` : `${styles.cut} ${styles.cuttel} ${styles.dark}`}></div>
@@ -94,7 +105,7 @@ const Touch = () => {
             type="text"
             id={styles.message}
             className={styles.input}
-            placeholder=""
+            placeholder="Message"
             name="message"
           />
           <div className={mode === "light" ? `${styles.cut} ${styles.cutmes} ${styles.whiteBg}` : `${styles.cut} ${styles.cutmes} ${styles.dark}`}></div>
@@ -103,8 +114,10 @@ const Touch = () => {
           </label>
         </div>
         <div className={`${styles.inputContainer} ${styles.ic5}`}>
-          <button className={styles.btn} type="submit">
-            envoyer
+          <button className={`${styles.btn} ${success ? styles.success : ""} ${error? styles.failed : ""}`} type="submit"> 
+          {!success && !error && "Envoyer"}
+            {success ? "Votre message à été envoyé avec succès" : ""} 
+            {error ? "Echec d'envoi, ressayer plus tard" : ""} 
           </button>
         </div>
       </form>
