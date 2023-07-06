@@ -1,0 +1,12 @@
+.container {
+    position: fixed;
+    top: 0;
+    width: 100svw;
+    min-height: 100svh;
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.485);
+    cursor: not-allowed;
+    display: flex;
+    align-items: center;justify-content: center;
+    z-index: 2;
+}

@@ -1,26 +1,34 @@
 "use client";
-import React, { useContext, useRef } from "react";
+import React, { useContext, useRef, useState } from "react";
 import styles from "./touch.module.css";
 import Image from "next/image.js";
 import { ThemeContext } from "@/context/themeContextToggle.js";
 import emailjs from '@emailjs/browser';
+import Loading from "../loading/Loading.jsx";
 const Touch = () => {
-  console.log(process.env.GOOGLE_CLIENT_ID)
+  const [success, setSuccess] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(false)
   const form = useRef(null)
   const {mode} =  useContext(ThemeContext)
   const sendEmail = (e)=>{
+    setLoading(true)
     e.preventDefault();
-    
     emailjs.sendForm(process.env.NEXT_PUBLIC_MY_SERVICE_ID, process.env.NEXT_PUBLIC_MY_TEMPLATE_ID, form.current, process.env.NEXT_PUBLIC_MY_PUBLIC_KEY)
     .then((result) => {
+      result.status === 200 && setSuccess(true)
       console.log(result);
+      setLoading(false)
   }, (error) => {
+    setError(true)
       console.log(error);
+      setLoading(false)
   });
   }
 
   return (
     <div className={mode ==="light"? `${styles.container}`: `${styles.container} ${styles.dark}`}>
+      {loading && <Loading />}
       <div className={styles.textBox}>
       <h4 className={styles.title}>Contact.</h4>
       <p>
