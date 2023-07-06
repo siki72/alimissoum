@@ -93,7 +93,7 @@ const Touch = () => {
             placeholder="Nom"
             name="name"
           />
-          <div className={mode === "light" ? `${styles.cut} ${styles.whiteBg}` : `${styles.dark} ${styles.cut}`}></div>
+          <div className={mode === "light" ? `${styles.cut} ${styles.whiteBg}` : `${styles.black} ${styles.cut}`}></div>
           <label htmlFor="firstName" className={styles.label}>
             Nom
           </label>
@@ -106,7 +106,7 @@ const Touch = () => {
             placeholder="Prénom"
             name="lastName"
           />
-          <div className={mode === "light" ? `${styles.cut} ${styles.cutpre} ${styles.whiteBg}`: `${styles.cut} ${styles.cutpre} ${styles.dark}`} ></div>
+          <div className={mode === "light" ? `${styles.cut} ${styles.cutpre} ${styles.whiteBg}`: `${styles.cut} ${styles.cutpre} ${styles.black}`} ></div>
           <label htmlFor="lastName" className={styles.label}>
             Prénom
           </label>
@@ -119,7 +119,7 @@ const Touch = () => {
             placeholder="Email"
             name="email"
           />
-          <div className={mode === "light" ? `${styles.cut} ${styles.short}`: `${styles.cut} ${styles.dark}`}></div>
+          <div className={mode === "light" ? `${styles.cut} ${styles.short}`: `${styles.cut} ${styles.black}`}></div>
           <label htmlFor="email" className={styles.label}>
             Email
           </label>
@@ -132,7 +132,7 @@ const Touch = () => {
             placeholder="Téléphone"
             name="phone"
           />
-          <div className={mode === "light" ? `${styles.cut} ${styles.cuttel} ${styles.whiteBg}` : `${styles.cut} ${styles.cuttel} ${styles.dark}`}></div>
+          <div className={mode === "light" ? `${styles.cut} ${styles.cuttel} ${styles.whiteBg}` : `${styles.cut} ${styles.cuttel} ${styles.black}`}></div>
           <label htmlFor="phone" className={styles.label}>
             Téléphone
           </label>
@@ -146,7 +146,7 @@ const Touch = () => {
             placeholder="Message"
             name="message"
           />
-          <div className={mode === "light" ? `${styles.cut} ${styles.cutmes} ${styles.whiteBg}` : `${styles.cut} ${styles.cutmes} ${styles.dark}`}></div>
+          <div className={mode === "light" ? `${styles.cut} ${styles.cutmes} ${styles.whiteBg}` : `${styles.cut} ${styles.cutmes} ${styles.black}`}></div>
           <label htmlFor="message" className={styles.label}>
             Message
           </label>
