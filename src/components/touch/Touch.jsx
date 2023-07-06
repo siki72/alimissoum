@@ -81,7 +81,7 @@ const Touch = () => {
       Vous êtes intéressé par une collaboration avec moi ? Je suis ouvert à la discussion concernant la conception et le développement de votre application, ainsi que les opportunités de partenariat. N&apos;hésitez pas à me <span >contacter</span> .
       </p>
       </div>
-      <form  onClick={()=> setMailError(false)} onSubmit={sendEmail} ref={form} className={mode ==="dark" ? `${styles.form} ${styles.dark}`: `${styles.form} ${styles.whiteBg}`}>
+      <form  onClick={()=> setMailError(false)} onSubmit={sendEmail} ref={form} className={mode ==="dark" ? `${styles.form} ${styles.black}`: `${styles.form} ${styles.whiteBg}`}>
         {mailError && <div className={styles.errorMessage} >
           <span ref={errorRef}></span>
           </div>} 
