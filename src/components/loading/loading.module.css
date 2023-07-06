@@ -9,4 +9,36 @@
     display: flex;
     align-items: center;justify-content: center;
     z-index: 2;
+    gap:2rem;
+}
+
+.balls{
+    display: flex;
+}
+.ball {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    margin-left: 10px;
+    border-radius: 50px;
+    animation: ball 0.5s ease infinite alternate;
+}
+
+.ball2{
+    animation-delay: 0.1s;
+}
+
+.ball3{
+    animation-delay: 0.2s;
+}
+
+@keyframes ball {
+    to {
+        transform: translateY(-10px);
+    }
+}
+.text {
+    font-weight: 200;
+    color: white;
+    font-size: 1.3rem;
 }
